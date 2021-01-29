@@ -13,6 +13,8 @@ using namespace std;
 #define scanText(s) getline(cin, s)
 #define scanWord(w) cin >> w
 #define scanIntArray(arr, n) for(int i = 0; i < n; i++) {scanf("%d", &arr[i]);}
+#define scanLongArray(arr, n) for(int i = 0; i < n; i++) {scanf("%ld", &arr[i]);}
+#define scanLong64Array(arr, n) for(int i = 0; i < n; i++) {scanf("%lld", &arr[i]);}
 
 /*************Output preprocessors*************/
 #define printInt(i) printf("%d\n", i)
