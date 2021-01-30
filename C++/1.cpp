@@ -8,6 +8,7 @@ using namespace std;
 #define scanArray(arr, n) for(int i = 0; i < n; i++) cin >> arr[i];
 #define printArray(arr, n) for(int i = 0; i < n; i++) cout << arr[i] << " ";
 #define sortA(arr, n) sort(arr, arr+n)
+#define sortAr(arr, n) sort(arr, arr+n, greater<int>())
 #define sortV(v) sort(v.begin(), v.end())
 #define sortVr(v) sort(v.rbegin(), v.rend())
 #define rep(i, a, n) for(int i = a; i < n; i++)
