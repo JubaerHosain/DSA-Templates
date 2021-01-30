@@ -10,6 +10,7 @@ using namespace std;
 #define sortVector(v) sort(v.begin(), v.end()); 
 #define sortString(s) sort(s.begin(), s.end()); 
 #define sortArray(arr, n) sort(arr, arr+n)
+#define for(a, n) for(int i = a; i < n; i++)
 #define add push_back
 #define long long long
 #define inf 1e9
