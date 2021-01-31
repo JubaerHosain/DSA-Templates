@@ -5,6 +5,7 @@
 #include<cmath>
 #include<map>
 using namespace std;
+#define modMul(a, b, p) ((a%p)*(b%p))%p
 #define scanArray(arr, n) for(int i = 0; i < n; i++) cin >> arr[i];
 #define printArray(arr, n) for(int i = 0; i < n; i++) cout << arr[i] << " ";
 #define sortA(arr, n) sort(arr, arr+n)
