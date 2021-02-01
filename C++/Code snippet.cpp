@@ -1,35 +1,37 @@
-#include<iostream>
-#include<string>
-#include<algorithm>
-#include<vector>
-#include<cmath>
-#include<map>
+#include<bits/stdc++.h>
 using namespace std;
-#define modMul(a, b, p) ((a%p)*(b%p))%p
-#define scanArray(arr, n) for(int i = 0; i < n; i++) cin >> arr[i];
-#define printArray(arr, n) for(int i = 0; i < n; i++) cout << arr[i] << " ";
-#define sortA(arr, n) sort(arr, arr+n)
-#define sortAr(arr, n) sort(arr, arr+n, greater<int>())
-#define sortV(v) sort(v.begin(), v.end())
-#define sortVr(v) sort(v.rbegin(), v.rend())
+#define all(v) v.begin(), v.end()
+#define allr(v) v.rbegin(), v.rend()
+#define des() greater<>()
 #define rep(i, a, n) for(int i = a; i < n; i++)
+#define rrep(i, n, a) for(int i = n; i >= a; i--)
+#define umap unordered_map
+#define uset unordered_set
 #define add push_back
-#define long long long
-#define uLong unsigned long
-#define inf 1e9
-int mod = 1e9+7;
+#define ll long long
+#define ull unsigned long long
+#define mod(a, b, p) ((a%p)*(b%p))%p
+#define newline cout << endl;
+#define scanArray(arr, n) for(int i = 0; i < n; i++) cin >> arr[i];
+#define printArray(arr, n)                  \
+    for(int i = 0; i < n; i++) {            \
+        if(i==n-1) cout << arr[i] << endl;  \
+        else cout << arr[i] << " ";         \
+    }
+//#define inf 1e9
+//#define mod 1e9+7
 
 /*************User defined function*************/
 void solve() {
-    int test;
-    cin >> test;
-    while(test-- > 0) {
-       
-    }
+    
 }
 
 /*************main function*************/
 int main() {
-    solve();
+    int test;
+    cin >> test;
+    while(test-- > 0) {
+        solve();
+    }
     return 0;
-}
+}    
