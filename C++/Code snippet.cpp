@@ -8,21 +8,31 @@ using namespace std;
 #define umap                    unordered_map
 #define uset                    unordered_set
 #define add                     push_back
-#define newline                 cout << endl
+#define endl                    '\n'
 #define scan_array(arr, n)      for(int i = 0; i < n; i++) cin >> arr[i];
 #define print_array(arr)        for(int val: arr) cout << val << " ";
 #define print(var)              cout << var << endl
 typedef long long int ll;
 typedef unsigned long long int ull;
 typedef long double ld;
+const int inf = INT_MAX;
 
 /*************User defined function*************/
 void solve() {
-    
+    int n; cin >> n;
+    print(n);
 }
 
 /*************main function*************/
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif 
+
     int test;
     cin >> test;
     while(test-- > 0) {
