@@ -10,7 +10,7 @@ using namespace std;
 #define add                     push_back
 #define endl                    '\n'
 #define scan_array(arr, n)      for(int i = 0; i < n; i++) cin >> arr[i];
-#define print_array(arr)        for(int val: arr) cout << val << " ";
+#define print_array(arr)        for(auto val: arr) cout << val << " ";
 #define print(var)              cout << var << endl
 typedef long long int ll;
 typedef unsigned long long int ull;
