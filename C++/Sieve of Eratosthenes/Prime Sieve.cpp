@@ -26,13 +26,14 @@ const int N = 1e6+10;
 
 /*************Sieve of Eratosthenes*************/
 vector<bool> prime(N, false);
+
 void prime_sieve() {
     prime[2] = true;                        //2 is a prime number
     for(ll i = 3; i <= N; i+=2) {          //mark all odd as true
         prime[i] = true;                    //because prime numbers are also odd
     }
 
-    for(ll i = 3; i <= N; i+=2) {
+    for(ll i = 3; i*i <= N; i+=2) {
         if(prime[i]) {                              //if is prime number 
             for(ll j = i*i; j <= N; j+=i) {        //mark all multiple as false
                 prime[j] = false;
