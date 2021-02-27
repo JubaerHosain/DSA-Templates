@@ -16,7 +16,7 @@ void dijkstra(int u) {
         used[u] = true;
 
         for(auto a: g[u]) {
-            int v = a.first, w = a.second;
+            ll v = a.first, w = a.second;
             if(dist[u] + w < dist[v]) {
                 dist[v] = dist[u] + w;
                 pq.push({dist[v], v});
