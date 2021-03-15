@@ -1,0 +1,23 @@
+Since n is composite, so it has a factor a with1<a<n.
+
+Then by the definition of a factor of positive integers, we have
+
+n=abwhere b is a positive integer>1(1)
+
+We need to show thata≤n−−√orb≤n−−√
+
+Ifa>n−−√andb>n−−√thenab>n−−√×n−−√=n
+
+which is a contradiction to (1)
+
+Consequently,a≤n−−√orb≤n−−√
+
+Since both a and b are divisors of n, we see that n has a positive divisor
+
+not exceedingn−−√.
+
+This divisor is either prime or, by the fundamental theorem of arithmetic,
+
+has a prime divisor less than itself. In either case, n has a prime 
+
+divisor≤n−−√.This completes the proof.
