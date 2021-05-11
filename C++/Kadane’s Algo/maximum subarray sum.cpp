@@ -1,8 +1,8 @@
 vector<int> v;
 
 int kadens_algo(int n) {
-    int mx = 0;
-    int curr = 0;
+    int mx = v[0];
+    int curr = v[0];
 
     rep(i, 0, n) {
         curr = max(v[i], v[i]+curr);
