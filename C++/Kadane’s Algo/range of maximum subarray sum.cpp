@@ -5,7 +5,7 @@ pii kadens_algo(int n) {
     int l = 0, r = 0;
 
     int pos = 0;
-    rep(i, 0, n) {
+    rep(i, 1, n) {
         if(v[i]+curr > v[i]) curr += v[i];
         else curr = v[i], pos = i;
         if(curr > mx) mx = curr, l = pos, r = i; 
