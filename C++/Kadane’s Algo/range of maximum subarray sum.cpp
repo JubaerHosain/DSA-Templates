@@ -1,7 +1,7 @@
 vector<int> v;
 
 pii kadens_algo(int n) {
-    int mx = 0, curr = 0;
+    int mx = v[0], curr = v[0];
     int l = 0, r = 0;
 
     int pos = 0;
