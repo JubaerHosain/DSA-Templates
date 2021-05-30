@@ -1,5 +1,5 @@
 /*************Dijkstra Algo*************/
-vector<pii> g[N];
+vector<pii> g[N];                                      //{v, w}
 vector<int> prnt(N);
 vector<ll> d(N, inf);
 vector<bool> used(N);
