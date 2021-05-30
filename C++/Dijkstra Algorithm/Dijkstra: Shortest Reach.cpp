@@ -1,25 +1,27 @@
 /*************Dijkstra Algo*************/
-vector<pll> g[N];                               //{v, w}
-ll dist[N];
-bool used[N];
+vector<pii> g[N];
+vector<int> prnt(N);
+vector<ll> d(N, inf);
+vector<bool> used(N);
 
 void dijkstra(int u) {
-    pqueue<pll, vector<pll>, greater<pll>> pq;  //{w, v}
-    pq.push({0, u});
-    dist[u] = 0;
+    priority_queue<pii, vector<pii>, greater<pii>> q;  //{w, v}
+    q.push({0, u});
+    d[u] = 0;
 
-    while(!pq.empty()) {
-        u = pq.top().second;
-        pq.pop();
+    while(!q.empty()) {
+        u = q.top().second;
+        q.pop();
 
         if(used[u]) continue;
         used[u] = true;
 
         for(auto a: g[u]) {
             ll v = a.first, w = a.second;
-            if(dist[u] + w < dist[v]) {
-                dist[v] = dist[u] + w;
-                pq.push({dist[v], v});
+            if(d[u] + w < d[v]) {
+                d[v] = d[u] + w;
+                q.push({d[v], v});
+                prnt[v] = u;
             }
         }
     }
