@@ -51,6 +51,7 @@ int get_sum(int l, int r, int n) {
 
 void update(int pos, int val, int n) {
     int diff = val - a[pos];
+    a[pos] = val;
     update(0, 0, n-1, pos, diff);
 }
 
