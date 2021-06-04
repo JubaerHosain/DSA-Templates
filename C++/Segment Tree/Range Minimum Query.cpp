@@ -33,8 +33,28 @@ int get_min(int i, int sl, int sr, int l, int r) {
     return min(get_min(2*i+1, sl, mid, l, r), get_min(2*i+2, mid+1, sr, l, r));
 }
 
+void update(int i, int sl, int sr, int pos, int val) {
+    if(sl == sr) {                            //update in the leaf node of the tree
+        tree[i] = val;
+        return;
+    }
+    
+    int mid = (sl + sr) / 2;
+    if(pos <= mid) 
+        update(2*i+1, sl, mid, pos, val);
+    else 
+        update(2*i+2, mid+1, sr, pos, val);
+    
+    tree[i] = min(tree[2*i+1], tree[2*i+2]);  //update intermediate nodes after returning the value of the leaf node
+}
+
 int get_min(int l, int r, int n) {
     return get_min(0, 0, n-1, l, r);
+}
+
+void update(int pos, int val, int n) {
+    a[pos] = val;
+    update(0, 0, n-1, pos, val);
 }
 
 /*************User defined function*************/
