@@ -44,6 +44,8 @@ void solve() {
 
     rep(i, 0, n) cin >> a[i];
 
+    //must have to call buildST function first
+    //root of the tree is 0'th index
     buildST(0, 0, n-1);
 
     int q;
