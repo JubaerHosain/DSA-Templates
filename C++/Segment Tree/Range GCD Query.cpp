@@ -10,7 +10,7 @@ typedef long long ll;
 typedef long double ld;
 typedef pair<int, int> pii;
 
-/*************User defined function*************/
+/*************Range GCD Query*************/
 const int N = 1e5+5;
 vector<int> a(N);
 vector<int> tree(4*N);
@@ -56,6 +56,8 @@ void update(int pos, int val, int n) {
     a[pos] = val;
     update(0, 0, n-1, pos, val);
 }
+
+/*************User defined function*************/
 
 void solve() {
     int n;
