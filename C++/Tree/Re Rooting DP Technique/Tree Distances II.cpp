@@ -29,7 +29,9 @@ void dfs(int u, int p, int d) {
 }
 
 void dfs1(int u, int p, int n) {
-    ans[u] =  ans[p] - (dist_sum[u] - cnt[u]*(dist[u]-1)) + n - cnt[u] + dist_sum[u] - cnt[u]*dist[u];
+    //ans[u] =  ans[p] - (dist_sum[u] - cnt[u]*(dist[u]-1)) 
+    //+ n - cnt[u] + dist_sum[u] - cnt[u]*dist[u];
+    ans[u] = ans[p] + n - 2 * cnt[u];            //simplified equation
     for(int v: g[u]) {
         if(v == p) continue;
         dfs1(v, u, n);
