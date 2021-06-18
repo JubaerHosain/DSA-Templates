@@ -14,7 +14,7 @@ typedef pair<int, int> pii;
 const int N = 1e5+5;
 int table[N][30];
 
-void build_table(vector<int> a, int n) {
+void build_table(vector<int> &a, int n) {
     rep(i, 0, n) table[i][0] = a[i];
 
     for(int j = 1; (1 << j) <= n; j++) {
