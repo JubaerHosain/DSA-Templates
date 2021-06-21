@@ -52,6 +52,7 @@ TrieNode* remove(TrieNode* root, int n, int i) {
     return root;
 }
 
+//why giving double sum????????????
 int max_xor_sum(TrieNode* root, int n) {
     int sum = 0;
     TrieNode* curr = root;
