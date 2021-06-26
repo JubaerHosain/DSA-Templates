@@ -1,0 +1,2 @@
+if(find(x) == x) cnt++;
+that means x is the root of a component.
