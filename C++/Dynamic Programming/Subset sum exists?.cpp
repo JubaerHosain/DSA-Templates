@@ -12,7 +12,8 @@ void solve() {
     rep(i, 1, n+1) {
         rep(j, 1, sum+1) {
             if(j < v[i]) dp[i][j] = dp[i-1][j];
-            else dp[i][j] = dp[i-1][j] || dp[i-1][j-v[i]];
+            else dp[i][j] = dp[i-1][j] || dp[i-1][j-v[i]];   //every number can use exactly one time thats why dp[i-1][j-v[i]]
+                                                             //if use multiple times dp[i][j-v[i]]] while count number of ways
         }
     }
 
