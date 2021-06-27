@@ -19,7 +19,7 @@ public class CoinChange {
                         excluding  = dp[i-1][j];
                     }
                     if(j >= coins[i]){  //including coins[i]
-                        including = dp[i][j-coins[i]];
+                        including = dp[i][j-coins[i]];          //coins[i] can multiple times, if use exactly one time then dp[i-1][j-coins[i]]              
                     }
                     
                     dp[i][j] = excluding + including;
