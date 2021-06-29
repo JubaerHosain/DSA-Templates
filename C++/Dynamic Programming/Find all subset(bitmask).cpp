@@ -19,7 +19,8 @@ void solve() {
     int a[4];
     rep(i, 0, 4) cin >> a[i];
 
-    rep(i, 1, (1<<4)) {
+    //for all non-empty subset, thats why starts from 1 otherwise from 0
+    rep(i, 1, (1<<4)) {  
         int sum = 0;
         rep(j, 0, 4) {
             if(i & (1<<j)) 
