@@ -15,7 +15,7 @@ typedef vector<vector<int>> vii;
 /*
     find a path from any cell in first row to
     any cell in the last row which minimize/maximized sum
-    moves: right or down, down-left or down-right
+    moves: down, down-left or down-right
 */
 
 /*****User defined function*****/
