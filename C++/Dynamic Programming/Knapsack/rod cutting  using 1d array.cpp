@@ -13,7 +13,7 @@ typedef long long ll;
 class Solution{
   public:
     int cutRod(int price[], int n) {
-      //every i is the weight of corresponding price 1 to n
+      //every i is the weight of corresponding price 1 to n, as well as index
       
       
         //code here
