@@ -21,6 +21,7 @@ class Solution{
         for(int i = 1; i <= n; i++) {
             for(int j = i; j <= n; j++) {
                 dp[j] = max(dp[j], max(dp[j-1], price[i-1] + dp[j-i]));
+                //dp[j-1] included for, if making j is impossible then copy from previous weight
             }
         }
         
