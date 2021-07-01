@@ -14,6 +14,7 @@ typedef vector<vector<ll>> vii;
 class Solution{
   public:
     int cutRod(int price[], int n) {
+     //every i the is weight of corresponding price 1 to n, as well as index
         //code here
         vii dp(n+1, vector<ll>(n+1, 0));
         for(int i = 1; i <= n; i++) {
