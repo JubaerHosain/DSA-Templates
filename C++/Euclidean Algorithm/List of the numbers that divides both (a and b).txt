@@ -1,2 +1,0 @@
-1. find the gcd of a and b.
-2. All divisor of gcd is also divisor of both a and b.
