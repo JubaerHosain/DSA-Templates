@@ -32,7 +32,7 @@ void dfs(int u, int p = -1) {
         } else {
             //this is tree edge (u->v)
             dfs(v, u);
-            if(low[u] < low[v]) 
+            if(in[u] < low[v]) 
                 bridges.push_back({u, v});
             low[u] = min(low[u], low[v]);
         }
