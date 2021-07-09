@@ -20,10 +20,13 @@ bool cycle(int u, int p) {
     used[u] = true;
 
     for(int v: g[u]) {
+        if(v == p)
+            continue;
         if(!used[v]) {
             if(cycle(v, u))
                 return true;
-        } else if(v != p) {
+        } else {
+            //this is back edge (u, v)
             return true;
         }
     }
