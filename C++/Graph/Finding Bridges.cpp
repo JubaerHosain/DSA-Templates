@@ -30,7 +30,7 @@ void dfs(int u, int p = -1) {
             //this is back edge (v->u)
             low[u] = min(low[u], in[v]);
         } else {
-            //this is forward edge (u->v)
+            //this is tree edge (u->v)
             dfs(v, u);
             if(low[u] < low[v]) 
                 bridges.push_back({u, v});
