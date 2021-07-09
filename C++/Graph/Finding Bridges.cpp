@@ -27,7 +27,7 @@ void dfs(int u, int p = -1) {
         if(v == p) 
             continue;
         if(used[v]) {
-            //this is back edge (v->u)
+            //this is back edge if(in[u] > in[v])
             low[u] = min(low[u], in[v]);
         } else {
             //this is tree edge (u->v)
