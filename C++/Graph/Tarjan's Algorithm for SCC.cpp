@@ -71,8 +71,9 @@ void solve() {
             dfs(i);
     }
 
-    rep(i, 1, scc.size()) {
-        vector<int> v = scc[i];
+    for(auto it: scc) {
+        auto v = it.second;
+        cout << it.first << ": ";
         for(int i: v) cout << i << " ";
         cout << endl;
     }
