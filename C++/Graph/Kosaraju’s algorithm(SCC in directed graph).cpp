@@ -45,13 +45,16 @@ void dfs2(int u) {
 }
 
 void solve() {
-    int n;
-    cin >> n;
+    int n, m;
+    cin >> n >> m;
 
-    rep(i, 1, n) {
+    rep(i, 1, m) {
         int u, v;
         cin >> u >> v;
         g[u].push_back(v);
+      
+        //transpose graph
+        //gT[v].push_back(u);
     }
 
     memset(used, false, sizeof(used));
