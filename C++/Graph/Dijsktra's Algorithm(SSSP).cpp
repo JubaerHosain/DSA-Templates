@@ -1,3 +1,14 @@
+/*
+    1. Dijkstra Algo and Bellman-Ford Algo can't find shortest path with 
+        negative weight cycle.
+    2. Dijkstra can't detect, but Bellman-Ford can detect negative weight cycle.
+    3. Bellman-Ford does not work with undirected graph with negative edges as 
+        it will declared as negative weight cycle.
+    4. Dijkstra doesn’t work for Graphs with negative weight "edges", 
+        Bellman-Ford works for such graphs.
+*/
+
+
 #include<bits/stdc++.h>
 using namespace std;
 #define endl          '\n'//notforinter
@@ -9,17 +20,6 @@ typedef long long ll;
 typedef long double ld;
 typedef pair<int, int> pii;
 typedef vector<vector<int>> vii;
-
-/*
-    1. Dijkstra Algo and Bellman-Ford Algo can't find shortest path with 
-        negative weight cycle.
-    2. Dijkstra can't detect, but Bellman-Ford can detect negative weight cycle.
-    3. Bellman-Ford does not work with undirected graph with negative edges as 
-        it will declared as negative weight cycle.
-    4. Dijkstra doesn’t work for Graphs with negative weight "edges", 
-        Bellman-Ford works for such graphs.
-*/
-
  
 /*****User defined function*****/
 int inf = 1e9+5;
