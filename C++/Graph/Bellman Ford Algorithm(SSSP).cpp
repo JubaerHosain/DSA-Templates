@@ -74,6 +74,19 @@ void solve() {
 
     if(updated) {
         print("Negative weight cycle found");
+
+        int u = node;
+        vector<int> cycle;
+        while(1) {
+            cycle.push_back(u);
+            if(u == node && cycle.size() > 1)
+                break;
+            u = parent[u];
+        }
+
+        reverse(cycle.rbegin(), cycle.rend());
+        for(int v: cycle) cout << v << " ";
+        
         return;
     }
     
