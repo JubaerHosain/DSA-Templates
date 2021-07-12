@@ -3,7 +3,7 @@
 //residual capacity = capacity - flow
 //reverse edge(initialy 0)
 //augmenting path
-//complexity EV^2
+//complexity E^2V
 //residual edges exixts to "undo" bad augmenting path
 //which do not lead to a maximum flow
 
