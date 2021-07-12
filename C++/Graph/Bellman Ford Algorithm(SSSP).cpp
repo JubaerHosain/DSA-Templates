@@ -55,16 +55,18 @@ void solve() {
                 dist[v] = dist[u] + w;
             }
         }
-        if(updated) break;
+        if(!updated) break;
     }
 
     //negative weight cycle contains or not
+    int node;
     updated = false;
     for(auto it: edges) {
         int w = it.first;
         int u = it.second.first;
         int v = it.second.second;
         if(dist[u] != inf && dist[u] + w < dist[v]) {
+            node = u;
             parent[v] = u;
             updated = true;
             dist[v] = dist[u] + w;
