@@ -4,6 +4,8 @@
 //reverse edge(initialy 0)
 //augmenting path
 //complexity EV^2
+//residual edges exixts to "undo" bad augmenting path
+//which do not lead to a maximum flow
 
 #include<bits/stdc++.h>
 using namespace std;
