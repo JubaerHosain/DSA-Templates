@@ -43,6 +43,7 @@ void solve() {
     memset(used, 0, sizeof(used));
     memset(parent, -1, sizeof(parent));
 
+    //priority_queue<pii> pq;
     priority_queue<pii, vector<pii>, greater<pii>> pq;
     pq.push({0, 1});
     dist[1] = 0;
@@ -63,6 +64,7 @@ void solve() {
                 parent[v] = u;
                 dist[v] = dist[u] + w;
                 pq.push({dist[v], v});
+                //pq.push({-dist[v], v});
             }
         }
     }
