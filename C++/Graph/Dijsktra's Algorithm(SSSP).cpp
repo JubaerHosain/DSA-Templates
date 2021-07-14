@@ -2,6 +2,12 @@
     1. Works only if all edge weight is positive
 */
 
+/*
+    Dijkstra assumes monotonicity. Monotonicity means a function is either
+    non-decreasing or non-increasing. ie: All positive edge or all negative edge.
+    Graph must not contain negative weight cycle.
+    cses: Longest Flight Route
+*/
 
 #include<bits/stdc++.h>
 using namespace std;
