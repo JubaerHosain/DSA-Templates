@@ -43,6 +43,7 @@ void solve() {
     //disr[src] = 0;
     //parent[src] = -1;
     //if sssp then initialize dist with inf
+    //if not then sssp initialize dist with 0
     fill(dist, dist+N, 0);
 
     //need n-1 opertion but n th operation detect cycle;
