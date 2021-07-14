@@ -1,11 +1,5 @@
 /*
-    1. Dijkstra Algo and Bellman-Ford Algo can't find shortest path with 
-        negative weight cycle.
-    2. Dijkstra can't detect, but Bellman-Ford can detect negative weight cycle.
-    3. Bellman-Ford does not work with undirected graph with negative edges as 
-        it will declared as negative weight cycle.
-    4. Dijkstra doesn’t work for Graphs with negative weight "edges", 
-        Bellman-Ford works for such graphs.
+    1. Works only if all edge weight is positive
 */
 
 
