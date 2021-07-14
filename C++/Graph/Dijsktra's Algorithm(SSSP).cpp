@@ -54,7 +54,7 @@ void solve() {
         used[u] = 1;
         for(auto it: g[u]) {
             int v = it.second, w = it.first;
-            if(!used[v] && dist[u] + w < dist[v]) {
+            if(dist[u] + w < dist[v]) {
                 parent[v] = u;
                 dist[v] = dist[u] + w;
                 pq.push({dist[v], v});
