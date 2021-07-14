@@ -56,7 +56,7 @@ void solve() {
         if(dist[u] == -inf)
             continue;
 
-        //weight of each node is 1
+        //weight of each edge is 1
         for(int v: g[u]) {
             if(dist[v] < dist[u] + 1) {
                 parent[v] = u;
