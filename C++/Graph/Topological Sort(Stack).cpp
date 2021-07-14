@@ -1,3 +1,5 @@
+//Topologica Sorting/Ordering only valid for DAG
+
 #include<bits/stdc++.h>
 using namespace std;
 #define endl          '\n'//notforinter
