@@ -1,3 +1,6 @@
+//Topological Sorting only works for DAG
+
+
 #include<bits/stdc++.h>
 using namespace std;
 #define endl          '\n'//notforinter
