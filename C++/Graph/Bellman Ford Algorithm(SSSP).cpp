@@ -1,12 +1,13 @@
 /*
-    1. Dijkstra Algo and Bellman-Ford Algo can't find shortest path with 
-        negative weight cycle.
-    2. Dijkstra can't detect, but Bellman-Ford can detect negative weight cycle.
-    3. Bellman-Ford does not work with undirected graph with negative edges as 
-        it will declared as negative weight cycle.
-    4. Dijkstra doesn’t work for Graphs with negative weight edges, 
-        Bellman-Ford works for such graphs.
+    1. Bellman-ford Algo is a SSSP Algo that works with negative edge where Dijkstra is not.
+    2. Can detect and print negative weight cycle.
+    3. When negative weight cycle exist then answer may be wrong.
+    4. Undirected graph with negative edge always contains such cycle.
+    5. N th iteration dectect the cycle.
+    6. Trace back n times so that x becomes a node part of cycle. Because, This vertex 
+    will either lie in a negative weight cycle, or is reachable from it(but not in the cycle).
 */
+
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -17,15 +18,15 @@ using namespace std;
 #define rrep(i, n, s) for(int i = n; i >= s; i--)
 typedef long long ll;
 typedef long double ld;
-typedef pair<int, int> pii;
+typedef pair<ll, ll> pii;
 typedef vector<vector<int>> vii;
- 
+
 /*****User defined function*****/
-int inf = 1e9+5;
+ll inf = 1e17+5;
 int mod = 1e9+7;
-const int N = 1e3+5;
+const int N = 2500+5;
+ll dist[N];
 int parent[N];
-vector<int> dist(N, inf);
 
 void solve() {
     int n, m;
@@ -39,62 +40,47 @@ void solve() {
         edges.push_back({w, {u, v}});
     }
 
-    bool updated;
-    memset(parent, -1, sizeof(parent));
-    dist[1] = 0;
-    parent[1] = -1;
-    rep(i, 1, n-1) {
-        updated = false;
+    //disr[src] = 0;
+    //parent[src] = -1;
+    //if sssp then initialize dist with inf
+    fill(dist, dist+N, 0);
+
+    //need n-1 opertion but n th operation detect cycle;
+    int x = -1;
+    rep(i, 1, n) {
+        x = -1;
         for(auto it: edges) {
             int w = it.first;
             int u = it.second.first;
             int v = it.second.second;
             if(dist[u] != inf && dist[u] + w < dist[v]) {
+                x = v;
                 parent[v] = u;
-                updated = true;
                 dist[v] = dist[u] + w;
             }
         }
-        if(!updated) break;
+        if(x == -1) break;
     }
 
-    //negative weight cycle contains or not
-    int node;
-    updated = false;
-    for(auto it: edges) {
-        int w = it.first;
-        int u = it.second.first;
-        int v = it.second.second;
-        if(dist[u] != inf && dist[u] + w < dist[v]) {
-            node = u;
-            parent[v] = u;
-            updated = true;
-            dist[v] = dist[u] + w;
-            break;
-        }
-    }
-
-    if(updated) {
-        print("Negative weight cycle found");
-
-        int u = node;
-        vector<int> cycle;
-        while(1) {
-            cycle.push_back(u);
-            if(u == node && cycle.size() > 1)
-                break;
-            u = parent[u];
-        }
-
-        reverse(cycle.rbegin(), cycle.rend());
-        for(int v: cycle) cout << v << " ";
-        
+    if(x == -1) {
+        print("NO");
         return;
     }
-    
-    rep(i, 1, n) {
-        cout << i << "-> " << dist[i] << endl;
+
+    //trace back n times so that x becomes a node part of cycle
+    rep(i, 1, n) x = parent[x];
+
+    vector<int> cycle;
+    for(int v = x; ; v = parent[v]) {
+        cycle.push_back(v);
+        if(v == x && cycle.size() > 1) 
+            break;
     }
+
+    reverse(cycle.rbegin(), cycle.rend());
+
+    print("YES");
+    for(int v: cycle) cout << v << " ";
 }
  
 /*****main function*****/
