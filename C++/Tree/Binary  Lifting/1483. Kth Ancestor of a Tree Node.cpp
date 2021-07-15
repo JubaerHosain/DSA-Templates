@@ -7,6 +7,7 @@ public:
         depth = vector<int>(n);
         up = vector<vector<int>>(n, vector<int>(20));
         
+        //this is working for this particular problem
         parent[0] = 0;
         for(int i = 0; i < n; i++) {
             up[i][0] = parent[i];
@@ -16,6 +17,23 @@ public:
                 up[i][j] = up[up[i][j-1]][j-1];
             }
         }
+        
+        //binary lifting
+        //this is not working bcz cant find k > 1 th parent for first node
+        //but first node may have k > 1 th parent, and next nodes goes to wrong
+        // rep(u, 1, n) {
+        //     rep(i, 1, 30) {
+        //         up[u][i] = up[up[u][i-1]][i-1];
+        //     }
+        // }
+
+        //binary lifting
+        rep(i, 1, 30) {
+            rep(u, 1, n) {
+                up[u][i] = up[up[u][i-1]][i-1];
+            }
+        }
+        
     }
     
     int getKthAncestor(int node, int k) {
