@@ -1,0 +1,10 @@
+//using dfs when adj list.....or iterating when parent matrix
+
+//dfs approach is discussed on Tree section
+//iterative approach
+
+// evaluate the parent matrix
+	for(int d=1; d<MAXD; d++)
+	for(int i=1; i<=n; i++) {
+		parent[i][d] = parent[parent[i][d-1]][d-1];
+	}
