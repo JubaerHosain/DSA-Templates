@@ -1,0 +1,2 @@
+1. to find k'th parent, use binary lifting on graph.
+2. to find k'th child, use binary liftin on "inverted" graph.
