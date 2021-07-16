@@ -1,2 +1,0 @@
-The theorem used here is that if 'one' vertex can reach to all other vertex and be reached by all others, 
-then every vertex in this graph can reach all others.
