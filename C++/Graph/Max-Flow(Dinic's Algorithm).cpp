@@ -1,3 +1,9 @@
+/*
+    residual capacitty actually the current capacity of an edge.
+    initially same as capacity of edge bcz there is no flow.
+*/
+
+
 #include<bits/stdc++.h>
 using namespace std;
 #define endl          '\n'//notforinter
