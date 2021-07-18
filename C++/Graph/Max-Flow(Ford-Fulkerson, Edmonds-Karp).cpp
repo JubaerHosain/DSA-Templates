@@ -1,6 +1,10 @@
 //Edmonds-Karp algorithm is just an implementation of the Ford-Fulkerson method that uses BFS for finding augmenting paths.
 
 //residual capacity = capacity - flow
+/*
+    residual capacitty actually the current capacity of an edge.
+    initially same as capacity of edge bcz there is no flow.
+*/
 //reverse edge(initialy 0)
 //augmenting path
 //complexity E^2V
