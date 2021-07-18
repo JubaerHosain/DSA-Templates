@@ -128,7 +128,7 @@ typedef pair<int, int> pii;
 typedef vector<vector<int>> vii;
  
 /*****User defined function*****/
-ll inf = 1e8+5;
+ll inf = 1e18+5;
 int mod = 1e9+7;
 const int N = 5e2+5;
 bool used[N];
