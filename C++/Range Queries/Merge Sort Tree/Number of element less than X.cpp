@@ -13,7 +13,7 @@ typedef vector<vector<int>> vii;
 /*****User defined function*****/
 const int N = 2e5+5;
 vector<int> a(N);
-vector<int> tree[N];
+vector<int> tree[4*N];
 
 void merge(vector<int> &res, vector<int> &a, vector<int> &b) {
     int i = 0, j = 0;
