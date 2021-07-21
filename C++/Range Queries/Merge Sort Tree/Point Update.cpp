@@ -1,0 +1,5 @@
+//this is important link
+//https://codeforces.com/blog/entry/75304#comment-818888
+
+//USING POLICY BASED DATA STRUCTURE
+//SET CAN'T BE USED BCZ, ITERATOR CAN'T SUBTRACT OR ADD LIKE VECTOR ITERATOR
