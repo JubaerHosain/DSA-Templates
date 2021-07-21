@@ -6,6 +6,8 @@ using namespace __gnu_pbds;
 or 
 typedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update> ordered_set;
 or
+ 
+ //best use
 template<class T> using ordered_set = tree<T, null_type, 
 less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 //it would be declared as ordered_set<int> variable_name;
