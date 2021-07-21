@@ -3,9 +3,7 @@
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
 #define ordered_set tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update>
-
 or 
-  
 //typedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update> ordered_set;
 
 //inside function
@@ -21,7 +19,7 @@ or
     cout<<*X.find_by_order(4)<<endl; // 16
     cout<<(end(X)==X.find_by_order(6))<<endl; // true
 
-    cout<<X.order_of_key(-5)<<endl;  // 0
+    cout<<X.order_of_key(-5)<<endl;  // 0 //number of element strictly smaller than -5
     cout<<X.order_of_key(1)<<endl;   // 0
     cout<<X.order_of_key(3)<<endl;   // 2
     cout<<X.order_of_key(4)<<endl;   // 2
