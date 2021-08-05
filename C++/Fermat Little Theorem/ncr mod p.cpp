@@ -50,18 +50,25 @@ int mod = 1e9+7;
 const int N = 1e6+5;
 ll factorial[N];
 
-ll mod_pow(ll a, ll b, ll p) {
+ll mod_pow(ll a, ll b) {
     ll res = 1;
 
     while(b) {
         if(b&1)
-            res = (res * a) % p;
+            res = (res * a) % mod;
         b /= 2;
-        a = (a * a) % p; 
+        a = (a * a) % mod; 
     }
 
     return res;
 }
+
+ll nCr(ll n, ll r) {
+    ll ans = factorial[n];
+    ans = (ans * mod_pow(factorial[r], mod-2)) % mod;
+    ans = (ans * mod_pow(factorial[n-r], mod-2)) % mod;
+    return ans;
+} 
 
 void solve() {
     factorial[0] = 1; 
@@ -74,14 +81,8 @@ void solve() {
         int a, b;
         cin >> a >> b;
     
-        ll up = factorial[a];
-        ll d1 = mod_pow(factorial[b], mod-2, mod);
-        ll d2 = mod_pow(factorial[a-b], mod-2, mod);
-        ll ans = (d1 * d2) % mod;
-        ans = (up * ans) % mod;
-        cout << ans << endl;
+        cout << nCr(a, b) << endl;
     }
-    
 }
 
 /*****main function*****/
