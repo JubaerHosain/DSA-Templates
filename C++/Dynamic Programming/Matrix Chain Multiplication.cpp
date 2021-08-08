@@ -1,34 +1,40 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define endl          '\n'//not for interactive
-#define rep(i, s, n)  for(int i = s; i <= n; i++)
-#define rrep(i, n, s) for(int i = n; i >= s; i--)
+#define endl '\n'
 typedef long long ll;
 typedef pair<int, int> pii;
+typedef vector<vector<int>> vii;
 
 /*****User defined function*****/
 int mod = 1e9+7;
 const int N = 5e2+5;
-ll dp[N][N];
+int dp[N][N];
 
 void solve() {
-    ll n;
+    int n;
     cin >> n;
 
     vector<int> a(n);
-    rep(i, 0, n-1) cin >> a[i];
+    for(int i = 0; i < n; i++)
+        cin >> a[i];
 
-    rep(i, 1, n-1) dp[i][i] = 0;
+    for(int i = 0; i < n; i++)
+        dp[i][i] = 0;
 
-    rep(l, 2, n-1) rep(i, 1, n-l) {
-        int j = i + l - 1;
-        dp[i][j] = LONG_MAX;
-        rep(k, i, j-1) {
-            ll tmp = dp[i][k] + dp[k+1][j] + a[i-1] * a[k] * a[j];
-            dp[i][j] = min(dp[i][j], tmp);
+    for(int l = 2; l < n; l++) {
+        for(int i = 1; i <= n-l; i++) {
+            int j = i + l - 1;
+            int min_cnt = INT_MAX;
+
+            for(int k = i; k < j; k++) {
+                int tmp = dp[i][k] + dp[k+1][j] + a[i-1] * a[k] * a[j];
+                min_cnt = min(min_cnt, tmp);
+            }
+
+            dp[i][j] = min_cnt;
         }
-    } 
-    
+    }
+
     cout << dp[1][n-1] << endl;
 }
 
