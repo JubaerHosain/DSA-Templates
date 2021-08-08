@@ -26,7 +26,7 @@ ll substring_hash(int l, int r) {
     ll ans = hash_val[r];
 
     if(l > 0)
-        ans -= hash_val[l-1];
+        ans = (ans - hash_val[l-1] + mod) % mod;
 
     return (ans * inverse[l]) % mod;
 }
