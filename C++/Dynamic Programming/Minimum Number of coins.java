@@ -4,6 +4,9 @@ class Solution {
             return -1;
         }
         
+        //each coin has infinite
+        //number of times
+        
         int[] dp = new int[amount+1];
         Arrays.fill(dp, amount+1);
         dp[0] = 0;
