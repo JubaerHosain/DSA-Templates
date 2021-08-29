@@ -24,7 +24,7 @@ auto zfunction(string &str) {
         } else {
             int j = i - l;
             if(z[j] < r-i+1) {
-                z[i] = z[i];
+                z[i] = z[j];
             } else {
                 l = i;
                 while(r < n && str[r-l] == str[r])
