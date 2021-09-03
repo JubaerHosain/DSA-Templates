@@ -22,7 +22,7 @@ void counting_sort(vector<int> &vect) {
         --count[vect[i]];
     }
 
-    //for stable sort, c
+    //for stable sort, maitains relative order
     // for(int i = temp.size()-1; i >= 0; i--) {
     //     temp[count[vect[i]]-1] = vect[i];
     //     --count[vect[i]];
