@@ -19,7 +19,8 @@ void radix_sort(vector<suffix> &suffixes, int inx) {
     //vector<int> count(257, 0);
     //256 size not working for n > 256
     //bcz rank may have upto n(see line 65-77)
-    vector<int> count(n+1, 0);
+    //vector<int> count(n+1, 0);
+    vector<int> count(max(256, n+1), 0);
     
 
     //added 1, bcz rank[inx] may have -1
