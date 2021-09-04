@@ -16,7 +16,11 @@ void radix_sort(vector<suffix> &suffixes, int inx) {
         return;
 
     int n = suffixes.size();
-    vector<int> count(257, 0);
+    //vector<int> count(257, 0);
+    //256 size not working for n > 256
+    //bcz rank may have upto n(see line 65-77)
+    vector<int> count(n+1, 0);
+    
 
     //added 1, bcz rank[inx] may have -1
     for(int i = 0; i < n; i++) 
