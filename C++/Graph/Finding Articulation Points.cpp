@@ -17,7 +17,7 @@ const int N = 1e5+5;
 int timer = 0;
 vector<int> g[N];
 int in[N], low[N], used[N];
-set<int> apoint;
+set<int> apoint;    //avoiding multiple points
 
 void dfs(int u, int p = -1) {
     used[u] = 1;
