@@ -141,7 +141,7 @@ void solve_problem() {
     for(int i = 0; i < m-1; i++) {
         if(lcp_array[i] <= mx_len)
             continue;
-        
+        //suffix should from different string
         if((suffix_array[i] < n && suffix_array[i+1] > n)
         || (suffix_array[i] > n && suffix_array[i+1] < n)) 
             mx_len = lcp_array[i], pos = suffix_array[i];
