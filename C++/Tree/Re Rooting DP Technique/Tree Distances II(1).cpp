@@ -14,6 +14,7 @@ typedef pair<int, int> pii;
 const int N = 2e5+5;
 int a[N];
 vector<int> g[N];
+//sum = subtree sum(number of node in this subtree)
 ll sum[N], ans[N], res;
 
 void dfs(int u, int p, int d) {
