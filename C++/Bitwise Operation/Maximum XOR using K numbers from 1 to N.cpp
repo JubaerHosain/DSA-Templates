@@ -1,4 +1,4 @@
-//incorrect solution
+//each element can use multiple times
 
 #include <bits/stdc++.h>
 using namespace std;
