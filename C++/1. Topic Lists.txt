@@ -1,0 +1,11 @@
+1. Extended Eucledian Algorithm.
+2. Miller-Rabin Algorithm.
+3. Euler Totient Function.
+4. Persistant Segment Tree.
+5. Heavy Light Decomposition.
+6. Dinic's Algorithm.
+7. Euler Tour.
+8. DP on Bitmasking.
+9. Fast Fouriar Transform.
+
+https://codeforces.com/blog/-Morass-
