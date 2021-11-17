@@ -1,0 +1,20 @@
+Dynamic problems also requires "optimal substructure".
+
+According to Wikipedia:
+
+Dynamic programming is a method of solving complex problems by breaking them down into simpler steps. 
+It is applicable to problems that exhibit the properties of 1) overlapping subproblems which are only slightly smaller and 2) optimal substructure.
+
+Backtracking is a general algorithm for finding all (or some) solutions to some computational problem, 
+that incrementally builds candidates to the solutions, and abandons each partial candidate c ("backtracks") as soon as it determines that c cannot possibly be completed to a valid solution.
+
+For a detailed discussion of "optimal substructure", please read the CLRS book.
+
+Common problems for backtracking I can think of are:
+Eight queen puzzle
+Map coloring
+Sudoku
+
+DP problems:
+This website at MIT has a good collection of DP problems with nice animated explanations.
+A chapter from a book from a professor at Berkeley.
