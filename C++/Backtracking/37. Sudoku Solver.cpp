@@ -1,4 +1,5 @@
-// TLE............................................
+// previous submission was tle...
+// bcz i was traversing again after first completion....
 
 class Solution {    
     bool is_valid(vector<vector<char>>& board, int x, int y, char val) {
@@ -48,13 +49,14 @@ class Solution {
         }
         
         if(board[x][y] != '.') {
-            solveSudoku(board, nx, ny);
+           return solveSudoku(board, nx, ny);
         } 
         else {
-            for(int val = 1; val <= 9; val++) {
-                if(is_valid(board, x, y, (char)val)) {
-                    board[x][y] = (char)val;
-                    if(solveSudoku(board, nx, ny))
+            for(char val = '1'; val <= '9'; val++) {
+                if(is_valid(board, x, y, val)) {
+                    board[x][y] = val;
+                    
+                    if(solveSudoku(board, nx, ny)) 
                         return true;
                     // this is backtracking 
                     // restore the value if condition is not fulfilled
@@ -71,6 +73,6 @@ public:
     void solveSudoku(vector<vector<char>>& board) {
         solveSudoku(board, 0, 0);
         
-        //board changed internally
+        // update value of board internally..
     }
 };
