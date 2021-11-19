@@ -2,4 +2,25 @@ Euler's totient function, also known as phi-function ϕ(n), counts the number of
 Two numbers are coprime if their greatest common divisor equals 1 (1 is considered to be coprime to any number).
 
 
-Remember: if n is prime then phi-function = n-1.
+Remember: 
+1. if n is prime then phi-function ϕ(n) = n-1.
+2. if p is prime then ϕ(p^x) = (p^(x-1)) * (p-1).
+3. An arithmetic function f(x) is multiplicative if,
+   f(M*N) = F(M) * F(N), where gcd(M,M) = 1.
+4. let f(x) is multiplicative, then
+   N = p1^x1 * p2^x2 * p3^x3.......pn^xn.
+   note: it is possible to express a number as products of it prime factors.(google it).
+   so we can say that,
+    f(N) = f(p1^x1) * f(p2^x2) * f(p3^x3).......f(pn^xn).
+    (p1^x1 means prime factor p1 occurs x1 time.)
+5. now what would be the derived formula...
+""Code NCode youtube channel""
+see the prove...
+
+Now the final formula is.....
+ ϕ(n) = n * ((p1-1)/p1) * ((p2-1)/p2) * ((p3-1)/p3)............((pn-1)/pn)
+
+
+
+
+
