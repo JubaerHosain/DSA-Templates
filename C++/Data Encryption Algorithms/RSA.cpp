@@ -57,6 +57,9 @@ void solve_problem() {
     // d = e^(-1) mod phi
     // simplifies using euler totient function
     ll d = mod_pow(e, phi_func(phi)-1, phi);
+ 
+//     e = public key, d = private key
+//     encrypted by receiver public key, decrepted by receiver private key
 
     // here shown for only 20 integer 
     for(int i = 2323; i <= 2343; i++) {
