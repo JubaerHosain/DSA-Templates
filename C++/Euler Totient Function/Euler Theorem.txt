@@ -1,5 +1,6 @@
 The most famous and important property of Euler's totient function is expressed in Euler's theorem:
 a^ϕ(m) ≡ 1(mod m), if a and m are relatively prime.
+a^(ϕ(m)-1) = a^(-1) mod m, this logic is used in RSA Algorithm. See the code.
 
 In the particular case when "m is prime", Euler's theorem turns into Fermat's little theorem:
 a^(m−1) ≡ 1(mod m)
