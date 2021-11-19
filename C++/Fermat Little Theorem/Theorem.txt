@@ -2,4 +2,6 @@ a^(m-1) == 1 mod m
 a^(m-2) = a^(-1) mod m
 a^(m-3) = a^(-2) mod m
 
+"Note: m must be a prime".
+
 For any prime number 'm' and any integer a such that 'm' does not divide 'a' (the pair are relatively prime or co-prime).
