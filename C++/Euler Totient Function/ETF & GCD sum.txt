@@ -1,0 +1,21 @@
+1) gcd(i, N) = one of the divisor of N.
+2) instead of running loop from 1 to N, we can check for each divisor d of N how many numbers are there with gcd(i,N) = d.
+
+psudocode:
+
+sum = 0;
+cin >> q;
+while(q--) {
+  cin >> n;
+  for(int i = 1; i*i <= n; i++) {
+    if(n%i == 0) {
+        d1 = i;
+        d2 = n/i;
+        sum += d1 * getcount(d1, n);
+        if(d1 != d2)                      // for perfect squre divisor may duplicate, suppose 5*5 = 25
+          sum += d2 * getcound(d2, n)
+    }
+  }
+}
+
+To answer each query in sqrt(n) time, the getcount(d, n) function should work in constant time: O(1).
