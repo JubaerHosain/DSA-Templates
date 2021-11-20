@@ -1,0 +1,11 @@
+problem....
+
+int sum = 0;
+for(int i = 1; i <= n; i++)
+  sum += gcd(i, n);
+  
+this takes NLogN time to find sum;
+
+if there ar q queries each of takes input n, then totoal time complexity would be O(Q*NLogN) this is too much..
+now it can be optimeze into O(Q*Sqrt(N)) using euler totient function..
+See 'ETF & GCD.cpp'
