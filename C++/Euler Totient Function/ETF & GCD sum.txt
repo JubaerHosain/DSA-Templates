@@ -19,3 +19,11 @@ while(q--) {
 }
 
 To answer each query in sqrt(n) time, the getcount(d, n) function should work in constant time: O(1).
+
+now ,let's disscuss about getcount(d, n) function:
+1) if gcd(i, n) = d then gcd(i/d, n/d) = 1.
+2) let x1, x2, x3....are different integers from 1 to n such that gcd with n, gcd(xi, n) = d.
+now, 1 <= xi <= n
+ or, 1 <= xi/d <= n/d, this means the numbers xi <= n/d are co-prime with n/d. (implifies phi(n/d)).
+ so cout getcont(d, n) returns phi[n/d].
+ we can pre-calculate phi sieve to find phi[n/d] in constant time.
