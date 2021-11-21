@@ -1,0 +1,2 @@
+If a is a primitive root of a prime number p, then following condition should satisfy:
+*) the formula a^n mod p (for n = 1 to p-1) sould produce all numbers from 1 to p-1 exactly one times.
