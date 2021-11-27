@@ -1,0 +1,1 @@
+Goldbach conjecture, in number theory, says that every 'even number' greater than 2 is equal to the sum of two prime numbers.
