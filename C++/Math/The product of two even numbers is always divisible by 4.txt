@@ -1,0 +1,5 @@
+Be a,b two even numbers.
+
+So there exists two numbers x,y such as, a =2x and b = 2y.
+
+So ab = 4xy so ab is divisible by 4.
