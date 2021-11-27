@@ -9,4 +9,7 @@ void primeFactors(int n) {
         }
         if(cnt > 0) fts.add(i);
     }
+    
+    if(n > 1)
+        fts.add(n);
 }
