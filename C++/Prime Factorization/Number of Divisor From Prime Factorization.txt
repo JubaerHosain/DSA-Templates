@@ -1,0 +1,22 @@
+
+link: https://math.stackexchange.com/questions/433848/prime-factors-number-of-divisors
+
+If you write n=∏i=1npiei, then the number of divisors of n is the number of different products you can make of the form ∏i=1npifi where fi≤ei. 
+For each prime, there are ei+1 choices for fi and so the total number of choices is ∏i=1n(ei+1) as you suggest.
+///////////////////////////
+Let d(n) be the number of divisors for the natural number, n.
+
+We begin by writing the number as a product of prime factors: n=paqbrc... then the number of divisors, d(n)=(a+1)(b+1)(c+1)...
+To prove this, we first consider numbers of the form, n=pa. The divisors are 1,p,p2,...,pa; that is, d(pa)=a+1.
+
+Now consider n=paqb. The divisors would be:
+
+1,p,p2,...,pa,
+q,pq,p2q,...,paq,
+
+q2,pq2,p2q2,...,paq2,
+...,...,...,...,...,
+
+qb,pqb,p2qb,...,paqb
+Hence we prove that the function, d(n), is multiplicative, and in this particular case, d(paqb)=(a+1)(b+1). It should be clear how this can be extended for any 
+natural number which is written as a product of prime factors.
