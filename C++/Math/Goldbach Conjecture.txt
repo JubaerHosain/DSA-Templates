@@ -1,1 +1,3 @@
 Goldbach conjecture, in number theory, says that every 'even number = x' greater than 2(x>=4) is equal to the sum of two prime numbers.
+
+https://www.hackerrank.com/challenges/prime-sum/problem
