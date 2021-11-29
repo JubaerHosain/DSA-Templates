@@ -1,0 +1,5 @@
+Largest integer that can't be represented as a non-negative linear combination of m,n is equal to mn−m−n.
+The numbers greater than mn-m-n can be represented as a non-negative linear combination of m, n. 
+
+
+NOTE: m, n are co-prime.
