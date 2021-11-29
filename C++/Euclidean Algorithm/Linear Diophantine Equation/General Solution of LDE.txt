@@ -1,0 +1,7 @@
+study how to finds this relation..............video on CodeNCode
+
+x = x0 + (nb/g)
+y = y0 - (na/g)
+
+x0, y0 is one of the solution of LDE ax + by = c.
+n is any ingeger number.
