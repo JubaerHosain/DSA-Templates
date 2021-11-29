@@ -1,3 +1,6 @@
+/*find the value of x and y for the equation ax + by = gcd(a, b)*/
+
+
 /*************Extended euclidean algorithm*************/
 int gcd(int a, int b, int &x, int &y) {
     if(b == 0) {
