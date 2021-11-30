@@ -1,1 +1,4 @@
-a positive integer n > 1n>1 is a prime if and only if (n-1)! \equiv -1 \pmod {n}(n−1)!≡−1(modn).
+a positive integer n > 1n>1 is a prime if and only if ((n-1)! = -1 mod n) or (n−1)!≡−1(modn).
+
+why this is also equivalent of previous one?? (from codencode)
+(n-1)!%n = n-1.
