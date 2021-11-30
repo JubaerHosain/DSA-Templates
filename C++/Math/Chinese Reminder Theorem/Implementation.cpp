@@ -50,8 +50,7 @@ void solve_problem() {
         cin >> a[i].second;
     }
 
-    // if a[i].first < 2 then don't use 
-    // mod_pow(num, p-2, p) for mod inverse of num
+    // if a[i].first < 2 then change the line n >>= 1 to n /= 2 inside the mod_pow function 
 
     cout << CRT(a) << endl;
 }
