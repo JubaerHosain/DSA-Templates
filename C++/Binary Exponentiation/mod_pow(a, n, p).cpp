@@ -10,3 +10,6 @@ ll mod_pow(ll a, ll n, ll p) {
 
     return res;
 }
+
+// if there any chance to being n < 0, then change 7th line to n /= 2,
+// otherwise it will give TLE
