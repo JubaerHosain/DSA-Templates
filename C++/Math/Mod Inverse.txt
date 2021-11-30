@@ -1,0 +1,1 @@
+if use, mod_pow(a, p-2, p) for a^(-1) mod p, then p-2 must >= 0.
