@@ -1,0 +1,1 @@
+a positive integer n > 1n>1 is a prime if and only if (n-1)! \equiv -1 \pmod {n}(n−1)!≡−1(modn).
