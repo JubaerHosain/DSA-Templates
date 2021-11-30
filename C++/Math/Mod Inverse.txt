@@ -1,1 +1,19 @@
 if use, mod_pow(a, p-2, p) for a^(-1) mod p, then p-2 must >= 0.
+
+
+===============Theoy behind this expression==============
+The most famous and important property of Euler's totient function is expressed in Euler's theorem:
+a^ϕ(m) ≡ 1(mod m), if a and m are relatively prime.
+
+In the particular case when "m is prime", Euler's theorem turns into Fermat's little theorem:
+a^(m−1) ≡ 1(mod m)
+
+==================================================================================================================
+
+a^(m-1) == 1 mod m
+a^(m-2) = a^(-1) mod m
+a^(m-3) = a^(-2) mod m
+
+"Note: m must be a prime".
+
+For any prime number 'm' and any integer a such that 'm' does not divide 'a' (the pair are relatively prime or co-prime).
