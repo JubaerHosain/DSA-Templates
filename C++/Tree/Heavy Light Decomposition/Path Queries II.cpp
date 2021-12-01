@@ -32,6 +32,7 @@ void dfs1(int u, int p = 0) {
  
 void dfsHLD(int u, int chain, int p = 0) {
     head[u] = chain;
+    // next two lines are same as euler tour
     flatten_values[curr_index] = values[u];
     index_of[u] = curr_index++;
     if(heavy_child[u] != 0) 
