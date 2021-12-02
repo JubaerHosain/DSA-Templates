@@ -42,6 +42,7 @@ void dfs(int u, int p, int prnt_max) {
         if(v == p) continue;
         int left_max = (i == 0) ? -1 : prefix_max[i-1];
         int right_max = (i == n-1) ? -1 : suffix_max[i+1];
+        // in leaf height = 0
         int parent_max = 1 + max(prnt_max, max(left_max, right_max));
         dfs(v, u, parent_max);
         i++;
