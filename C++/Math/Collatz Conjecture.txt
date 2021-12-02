@@ -1,0 +1,7 @@
+Given a positive integer n, the task is to find whether this number reaches to 1 after performing following two operations:- 
+ 
+If n is even, then n = n/2.
+If n is odd, then n = 3*n + 1.
+Repeat above steps, until it becomes 1.
+
+// now Collatz Conjecture says that the steps must end in 1 after a finite number of steps...
