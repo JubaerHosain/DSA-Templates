@@ -14,6 +14,7 @@ typedef vector<vector<int>> vii;
 const int N = 2e5+5;
 
 bool cmp(pii a, pii b) {
+    //sort in ascending order by ending time
     if(a.second == b.second) return a.first < b.first;
     else return a.second < b.second;
 }
