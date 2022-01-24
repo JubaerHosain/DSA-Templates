@@ -22,6 +22,7 @@ class Solution{
             for(int j = i; j <= n; j++) {
                 dp[j] = max(dp[j], max(dp[j-1], price[i-1] + dp[j-i]));
                 //dp[j-1] included for, if making j is impossible then copy from previous weight
+                // for rod cutting it dosent happens bcz 1 to n all are given length, and all are possible to make.
             }
         }
         
