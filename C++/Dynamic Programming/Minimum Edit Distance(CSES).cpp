@@ -32,7 +32,7 @@ void solve() {
                 dp[i][j] = dp[i-1][j-1];
             else 
                 dp[i][j] = 1 + min({dp[i-1][j], dp[i][j-1], dp[i-1][j-1]});
-                // {i-1, remove} {j-1, insert}, {replace}
+                // {i-1, remove} {j-1, insert}, {replace} converting a to b
         }
     }
  
