@@ -15,6 +15,7 @@ typedef vector<vector<int>> vii;
 int mod = 1e9+7;
 int inf = 1e9+5;
 
+// return less element with max count
 int get_best(map<int, int> &mp, int ai) {
     auto it = mp.lower_bound(ai);
     if(it == mp.begin())
