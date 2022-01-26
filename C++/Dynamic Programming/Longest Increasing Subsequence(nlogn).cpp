@@ -32,6 +32,11 @@ void insert(map<int, int> &mp, int ai, int cnt) {
         auto tmp = it++;
         mp.erase(tmp);
     }
+    
+//     2 -> 3
+//     3 -> 2
+//     5 -> 3
+    // 2 -> 3 is beneficial, so erase bigger element with less or equal count
 }
 
 void solve() {
