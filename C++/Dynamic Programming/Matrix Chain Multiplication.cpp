@@ -21,11 +21,12 @@ void solve() {
     for(int i = 0; i < n; i++)
         dp[i][i] = 0;
 
+    // started from length two, like longest palindromic substring
     for(int l = 2; l < n; l++) {
         for(int i = 1; i <= n-l; i++) {
             int j = i + l - 1;
             int min_cnt = INT_MAX;
-
+            // divided at right side of index k
             for(int k = i; k < j; k++) {
                 int tmp = dp[i][k] + dp[k+1][j] + a[i-1] * a[k] * a[j];
                 min_cnt = min(min_cnt, tmp);
