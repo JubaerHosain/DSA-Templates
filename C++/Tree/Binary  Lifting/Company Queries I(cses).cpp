@@ -16,6 +16,7 @@ ll ans[N];
 int up[N][20];
 vector<int> g[N];
  
+// before comming u, all parent of u is processed
 void binary_lifting(int u, int p) {
     up[u][0] = p;
     rep(i, 1, 20) {
@@ -30,6 +31,15 @@ void binary_lifting(int u, int p) {
         binary_lifting(v, u);
     }
 }
+
+
+// binary lifting iterative apporach
+// first find  2^1, then 2^2, then 2^3...for all u
+// rep(i, 1, 30) {   this loop shoul be first
+//     rep(u, 1, n) {  all parent of u is processed or not don't know. thats why this loop is second
+//         up[u][i] = up[up[u][i-1]][i-1];
+//     }
+// }
  
 int query(int u, int k) {
     if(u == -1 || k == 0) 
