@@ -27,7 +27,8 @@ public:
         //     }
         // }
 
-        //binary lifting
+        // binary lifting
+        // first find  2^1, then 2^2, then 2^3...for all u
         rep(i, 1, 30) {
             rep(u, 1, n) {
                 up[u][i] = up[up[u][i-1]][i-1];
