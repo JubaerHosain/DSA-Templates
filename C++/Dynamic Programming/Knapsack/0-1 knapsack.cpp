@@ -29,9 +29,9 @@ void solve() {
     vii dp(n+1, vector<int>(s+1, 0));
     rep(i, 1, n+1) {
         rep(j, 1, s+1) {
-            if(j < w[i])
+            if(j < w[i])   // excluding w[i]
                 dp[i][j] = dp[i-1][j];
-            else    
+            else           //max(excluding, including) each w[i] can be use at most 1 times.
                 dp[i][j] = max(dp[i-1][j], p[i] + dp[i-1][j-w[i]]);
         }
     }
