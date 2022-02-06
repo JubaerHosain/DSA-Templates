@@ -22,6 +22,7 @@ void solve() {
         dp[i][i] = 0;
 
     // started from length two(actually three, i = 1, not 0), like longest palindromic substring
+    // two means = two different matrix
     for(int l = 2; l < n; l++) {
         for(int i = 1; i <= n-l; i++) {
             int j = i + l - 1;
