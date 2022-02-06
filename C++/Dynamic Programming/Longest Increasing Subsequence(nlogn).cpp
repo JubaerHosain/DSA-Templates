@@ -48,6 +48,7 @@ void solve() {
     rep(i, 0, n) cin >> a[i];
     
     // finding the maximum size not the actual sequence
+    // this algorithm can print the lis also?????
 
     map<int, int> mp;
     vector<int> dp(n);
