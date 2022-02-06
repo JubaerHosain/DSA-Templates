@@ -1,0 +1,6 @@
+Min Cost: 26000
+Parenthesis: ((A1*(A2*A3))*A4)
+Min Cost: 30000
+Parenthesis: (((A1*A2)*A3)*A4)
+Min Cost: 6000
+Parenthesis: (A1*A2)
