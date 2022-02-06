@@ -21,7 +21,7 @@ void solve() {
     for(int i = 0; i < n; i++)
         dp[i][i] = 0;
 
-    // started from length two, like longest palindromic substring
+    // started from length two(actually three, i = 1, not 0), like longest palindromic substring
     for(int l = 2; l < n; l++) {
         for(int i = 1; i <= n-l; i++) {
             int j = i + l - 1;
