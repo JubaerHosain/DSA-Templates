@@ -23,6 +23,12 @@ public class CoinChange {
                     }
                     
                     dp[i][j] = excluding + including;
+                    
+                    // if i started with 1 then
+                    // if(j < a[i]) //excluding a[i]
+                    //     dp[i][j] = dp[i-1][j];
+                    // else        // excluding  + including
+                    //     dp[i][j] = dp[i-1][j] + dp[i][j-a[i]];
                 }
                 
             }
