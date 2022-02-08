@@ -47,9 +47,13 @@ void solve() {
             continue;
 
         used[u] = 1;
+        //including node u to mst
         min_cost += p.first;
+     
+        //updating all of its adjacent(not added to mst)
         for(auto it: g[u]) {
             int v = it.second, w = it.first;
+            // If v is not in MST and weight of (u,v) is smaller than current key of v
             if(!used[v] && w < key[v]) {
                 key[v] = w;
                 parent[v] = u;
@@ -67,6 +71,8 @@ void solve() {
     //without key array(that stores weight of comming from parent(that is minimal)) 
     //may be parent_array will init by incorrect parent with maximum comming weight.
     //but min_cost will always correct
+    //key do not want to add a new node to the queue if it already has minimum comming weight
+    //keep track of correct parent array
 }
  
 /*****main function*****/
