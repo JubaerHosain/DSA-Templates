@@ -1,3 +1,22 @@
+
+https://www.youtube.com/watch?v=i9SZKy2yTZw
+
+for exam it would be helpfule, simulation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 #define endl          '\n'//notforinter
