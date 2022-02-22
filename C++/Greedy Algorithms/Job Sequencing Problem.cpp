@@ -43,6 +43,8 @@ void solve() {
 
     int profit = 0;
     for(int i = 0; i < n; i++) {
+     
+     // it can done in log(mx) instead of mx LINEAR TIME
         for(int j = a[i].first; j >= 1; j--) {
             if(available[j] == -1) {
                 profit += a[i].second;
