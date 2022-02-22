@@ -32,6 +32,7 @@ void solve() {
         dist[v][u] = min(dist[v][u], (ll)w);
     }
 
+//    using k as intermediary node 
     rep(k, 1, n) {
         rep(i, 1, n) rep(j, 1, n) 
             dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
