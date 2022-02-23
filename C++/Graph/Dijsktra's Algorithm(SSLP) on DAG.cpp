@@ -32,6 +32,7 @@ void solve() {
     rep(i, 1, m) {
         int u, v;
         cin >> u >> v;
+        // ????????????? -1
         g[u].push_back({v, -1});
     }
 
