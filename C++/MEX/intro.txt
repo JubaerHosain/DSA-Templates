@@ -1,0 +1,4 @@
+In mathematics, the mex of a subset of a well-ordered set is the smallest value from the whole set that does not belong to the subset. That is, it is the minimum value of the complement set. The name "mex" is shorthand 
+for "minimum excluded" value.
+
+vido link: https://www.youtube.com/watch?v=JDuVLyKn7Yw
