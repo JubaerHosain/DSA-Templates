@@ -1,0 +1,2 @@
+A better solution is to calculate the greatest common divisor (gcd) of given two numbers, and then count divisors of that gcd. 
+Time complexity: O(log(n)+ n1/2) where n is the gcd of two numbers.
