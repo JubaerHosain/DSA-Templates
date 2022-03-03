@@ -53,6 +53,7 @@ void make_dag(int u) {
     used[u] = true;
 
     for(int v: g[u]) {
+        // shold not 'v' here ?
         if(!used[u])
             make_dag(v);
 
