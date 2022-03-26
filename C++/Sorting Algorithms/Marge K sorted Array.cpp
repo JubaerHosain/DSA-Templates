@@ -1,6 +1,8 @@
 time and space complexity will affect with k*N*log(k*N) size(if put all values in a min heap), 
 to avoid space complexity use min Heap in this case time complexity will change to k*N*log(K) time and O(1) size . 
 
+Another way is to marge two list at a time and result with the third one and so on(this will take n^2 complexity)
+
 #include<bits/stdc++.h>
 using namespace std;
 #define endl    '\n'
