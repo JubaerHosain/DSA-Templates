@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// we have to check the matrix is diagonally dominated or not, if yes then this method is applicable otherwise not
+
+
 const double eps = 1e-9;
 const int N = 10;
 double x0[N], x1[N], b[N], a[N][N];
