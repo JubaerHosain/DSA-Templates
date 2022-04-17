@@ -1,3 +1,0 @@
-1. update value in a rage.
-2. suppose, l to r add the value x.
-then we should incremen the value l by x and decrement r+1 by x and then count prefix sum.
