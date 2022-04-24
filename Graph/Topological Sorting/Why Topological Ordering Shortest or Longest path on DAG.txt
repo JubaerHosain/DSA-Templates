@@ -1,0 +1,16 @@
+By using this algorithm the expected time complexity would not be O(V+E) as we have to visit an edge multiple times.
+
+queue.add(s)
+while(the queue is not empty)
+ for every adjacent vertex v of u
+   if( dist[v] > dist[u] + weight(u,v) )
+       dist[v] = dist[u] + weight(u,v)
+       add v to the queue
+
+But by using the topological sorting, we get the order in which the vertices should be
+traversed so that an edge is visited exactly once. So we could have guaranteed T.C. of O(V+E).
+
+Why Topological ordering ?
+Topological ordering gives us the order like 0 1 2 3 4 5 then, once we reach a node in this ordering (let's say 4) 
+then we've already computed the shortest path to it (4) as all the edges(as well as paths) of type u -> v (v = 4) and have already been visited.
+*Means before reaching v all path's to v from all its previous vertex's(u) has already been visited.
