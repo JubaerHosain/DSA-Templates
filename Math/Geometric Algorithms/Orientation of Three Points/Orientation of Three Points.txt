@@ -1,0 +1,13 @@
+// see the image
+
+Slope of line segment (p1, p2): σ = (y2 - y1)/(x2 - x1)
+Slope of line segment (p2, p3): τ = (y3 - y2)/(x3 - x2)
+
+If  σ > τ, the orientation is clockwise (right turn)
+
+Using above values of σ and τ, we can conclude that, 
+the orientation depends on sign of  below expression: 
+
+(y2 - y1)*(x3 - x2) - (y3 - y2)*(x2 - x1)
+
+Above expression is negative when σ < τ, i.e.,  counterclockwise
