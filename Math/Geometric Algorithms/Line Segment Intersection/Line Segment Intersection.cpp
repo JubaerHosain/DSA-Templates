@@ -24,6 +24,14 @@ bool on_segment(Point a, Point c, Point b) {
            c.y <= max(a.y, b.y) && c.y >= min(a.y, b.y);
 }
 
+// this is not tested by any submission
+// test before using this line of codes
+// bool on_segment(Point a, Point c, Point b) {
+//     //point c lies on line ab or not
+//     return (c.x <= max(a.x, b.x) && c.x >= min(a.x, b.x)) ||
+//            (c.y <= max(a.y, b.y) && c.y >= min(a.y, b.y));
+// }
+
 bool intersected(Point a, Point b, Point c, Point d) {
     int o1 = orientation(a, b, c);
     int o2 = orientation(a, b, d);
