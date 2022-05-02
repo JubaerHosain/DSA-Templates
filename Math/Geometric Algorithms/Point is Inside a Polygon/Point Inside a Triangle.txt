@@ -1,0 +1,6 @@
+1. Find the area of triangle(p1, p2, p3), let say A
+2. Let say new point p
+3. Find the areas
+	A1 = area(p1,p2,p)
+	A2 = area(p1,p3,p)
+	A3 = area(p2,p3,p)
