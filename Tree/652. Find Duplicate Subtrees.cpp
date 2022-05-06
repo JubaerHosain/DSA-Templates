@@ -1,7 +1,7 @@
-1. brute force, n^3 solution, creat an array of each node, then run a n-squred loop 
-to chack every pair of node and run a dfs to check equality(this takes another n time).
-2. (n^2)longn using hashmap, tree flattaning
-3. using map + dfs
+// 1. brute force, n^3 solution, creat an array of each node, then run a n-squred loop 
+// to chack every pair of node and run a dfs to check equality(this takes another n time).
+// 2. (n^2)longn using hashmap, tree flattaning
+// 3. using map + dfs
 
 
 class Solution {
