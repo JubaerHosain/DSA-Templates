@@ -9,6 +9,8 @@ typedef vector<vector<int>> vii;
 int mod = 1e9+7;
 const int N = 1e5+5;
 
+// is the beginning part of the pattern is again appear anywhere else in the pattern or not?
+
 void compute_lps(string &pat, vector<int> &lps) {
     int m = pat.size();
 
