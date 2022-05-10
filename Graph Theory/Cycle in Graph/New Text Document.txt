@@ -1,0 +1,2 @@
+We can find cycle in directed graph using Khan's Topological Sorting Algorithm(Indegree).
+The idea is that if ans dosen't contains all nodes(some node is missed) that means there is a cycle, that's why those nodes(missed) cannot be able to sort.

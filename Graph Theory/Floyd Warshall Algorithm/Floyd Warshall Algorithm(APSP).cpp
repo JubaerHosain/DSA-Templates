@@ -1,20 +1,6 @@
 
 https://www.youtube.com/watch?v=i9SZKy2yTZw
-
-for exam it would be helpfule, simulation
-
-
-
-
-
-
-
-
-
-
-
-
-
+//for exam it would be helpfull, simulation
 
 
 #include<bits/stdc++.h>
@@ -51,10 +37,12 @@ void solve() {
         dist[v][u] = min(dist[v][u], (ll)w);
     }
 
-//    using k as intermediary node 
+    // using k as intermediary node 
     rep(k, 1, n) {
-        rep(i, 1, n) rep(j, 1, n) 
-            dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
+        rep(i, 1, n) rep(j, 1, n) {
+            // if dist[i][k] != inf && dist[k][j] != inf
+            dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]); 
+        }
     }
 
     while(q--) {

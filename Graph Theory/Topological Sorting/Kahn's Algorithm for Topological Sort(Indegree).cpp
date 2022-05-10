@@ -52,7 +52,7 @@ void solve() {
         }
     }
 
-    //has cycle
+    // has cycle
     if(ans.size() != n) {
         print("Sandro fails.");
         return;
