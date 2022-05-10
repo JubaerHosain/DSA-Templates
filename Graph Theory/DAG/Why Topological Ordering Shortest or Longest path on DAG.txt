@@ -12,5 +12,5 @@ traversed so that an edge is visited exactly once. So we could have guaranteed T
 
 Why Topological ordering ?
 Topological ordering gives us the order like 0 1 2 3 4 5 then, once we reach a node in this ordering (let's say 4) 
-then we've already computed the shortest path to it (4) as all the edges(as well as paths) of type u -> v (v = 4) and have already been visited.
+then we've already computed the shortest path to it (4) (some previous node calculated shortest path for 4) as all the edges(as well as paths) of type u -> v (v = 4) and have already been visited.
 *Means before reaching v all path's to v from all its previous vertex's(u) has already been visited.

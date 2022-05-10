@@ -58,7 +58,7 @@ void solve() {
 
         //weight of each edge is 1
         for(int v: g[u]) {
-            if(dist[v] < dist[u] + 1) {
+            if(dist[v] < dist[u] + 1) {    // dist[v] > dist[u] + 1 for shortest path
                 parent[v] = u;
                 dist[v] = dist[u] + 1;
             } 
