@@ -31,8 +31,7 @@ int next_state(string &pattern, int m, int state, char c) {
 }
 
 void solve_problem() {
-    // contains only lower case
-    // english latters
+    // contains only lower case english latters
     string pattern;
     cin >> pattern;
 

@@ -1,14 +1,12 @@
-complexity is O(m*no_of_char) instead of O(m^3*no_of_char)
+// complexity is O(m*no_of_char) instead of O(m^3*no_of_char)
   
 #include <bits/stdc++.h>
 using namespace std;
 #define NO_OF_CHARS 256
   
-/* This function builds the TF table 
-which represents Finite Automata for a 
-given pattern */
-void computeTransFun(char* pat, int M, int TF[][NO_OF_CHARS])
-{
+/* This function builds the TF table which 
+represents Finite Automata for a given pattern */
+void computeTransFun(char* pat, int M, int TF[][NO_OF_CHARS]) {
     int i, lps = 0, x;
   
     // Fill entries in first row
@@ -33,8 +31,7 @@ void computeTransFun(char* pat, int M, int TF[][NO_OF_CHARS])
 }
   
 /* Prints all occurrences of pat in txt */
-void search(char pat[], char txt[])
-{
+void search(char pat[], char txt[]) {
     int M = strlen(pat);
     int N = strlen(txt);
   
@@ -53,10 +50,9 @@ void search(char pat[], char txt[])
 }
   
 /* Driver code */
-int main()
-{
-    char txt[] = "ACACACACAGAAGA ACACAGAACACAGA GEEKS";
+int main() {
     char pat[] = "ACACAGA";
+    char txt[] = "ACACACACAGAAGA ACACAGAACACAGA GEEKS";
     search(pat, txt);
     return 0;
 }
