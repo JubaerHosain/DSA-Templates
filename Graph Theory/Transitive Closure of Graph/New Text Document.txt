@@ -1,0 +1,11 @@
+##: Given a directed graph, find out if a vertex j is reachable from another vertex i for all vertex pairs (i, j) 
+in the given graph. Here reachable mean that there is a path from vertex i to j. The reach-ability matrix is 
+called the transitive closure of a graph.
+
+##: Transitive Closure is the reachability matrix to reach from vertex u to vertex v of a graph. 
+One graph is given, we have to find a vertex v which is reachable from another vertex u, for all 
+vertex pairs (u, v).
+The final matrix is the Boolean type. When there is a value 1 for vertex u to vertex v, it means 
+that there is at least one path from u to v.
+
+##: Can be calculated using Floyd-Warshall Algorithm(All Pair Shortest Path).
