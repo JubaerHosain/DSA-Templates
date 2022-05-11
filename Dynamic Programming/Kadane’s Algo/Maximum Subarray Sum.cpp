@@ -10,4 +10,4 @@ int kadens_algo(int n) {
     }
 
     return mx;
-} 
+}

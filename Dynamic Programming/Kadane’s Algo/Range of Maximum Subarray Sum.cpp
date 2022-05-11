@@ -11,5 +11,5 @@ pii kadens_algo(int n) {
         if(curr > mx) mx = curr, l = pos, r = i; 
     }
 
-    return {l, r};  
+    return {l, r};
 }
