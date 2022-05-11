@@ -1,0 +1,19 @@
+Approach: Depth First Traversal can be used to detect cycle in a Graph. DFS for a connected graph produces 
+a tree. There is a cycle in a graph only if there is a back edge present in the graph. A back edge is an edge 
+that is from a node to itself (selfloop) or one of its ancestor in the tree produced by DFS.
+
+WHITE : Vertex is not processed yet. Initially, all vertices are WHITE.
+GRAY: Vertex is being processed (DFS for this vertex has started, but not finished which means that all 
+descendants (in DFS tree) of this vertex are not processed yet (or this vertex is in the function call stack)
+BLACK : Vertex and all its descendants are processed. While doing DFS, if an edge is encountered from current 
+vertex to a GRAY vertex, then this edge is back edge and hence there is a cycle. 
+
+
+Algorithm:  
+
+Create a recursive function that takes the edge and color array (this can be also kept as a global variable)
+Mark the current node as GREY.
+Traverse all the adjacent nodes and if any node is marked GREY then return true as a loop is bound to exist.
+If any adjacent vertex is WHITE then call the recursive function for that node. If the function returns true. Return true.
+If no adjacent node is grey or has not returned true then mark the current Node as BLACK and return false.
+ 
