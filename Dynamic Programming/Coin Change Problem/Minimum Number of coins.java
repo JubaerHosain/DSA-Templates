@@ -4,8 +4,8 @@ class Solution {
             return -1;
         }
         
-        //each coin has infinite
-        //number of times
+        // each coin can be used multiple times
+	// this is why used 1d array, that allows an element to pick multiple times
         
         int[] dp = new int[amount+1];
         Arrays.fill(dp, amount+1);

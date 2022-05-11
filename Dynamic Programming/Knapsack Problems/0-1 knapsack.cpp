@@ -33,6 +33,9 @@ void solve() {
                 dp[i][j] = dp[i-1][j];
             else           //max(excluding, including) each w[i] can be use at most 1 times.
                 dp[i][j] = max(dp[i-1][j], p[i] + dp[i-1][j-w[i]]);
+                // dp[i][j-w[i]] = unbounded knapsack, each elememt can be use multiple time.
+                // dp[i-1][j-w[i]] = 0-1 knapsack, each element can be use at most 1 time.
+                // w[i] is 1 indexing in this case, if 0 indexing then it should w[i-1]
         }
     }
 

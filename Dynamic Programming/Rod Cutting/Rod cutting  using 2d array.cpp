@@ -23,7 +23,7 @@ class Solution{
                     dp[i][j] = dp[i-1][j];
                 else
                     dp[i][j] = max(dp[i-1][j], price[i-1] + dp[i][j-i]); 
-                    //each element can be used multiple times, that's why dp[i][j-i], not dp[i-1][j-i]
+                    // each element can be used multiple times, that's why dp[i][j-i], not dp[i-1][j-i]
             }
         }
         

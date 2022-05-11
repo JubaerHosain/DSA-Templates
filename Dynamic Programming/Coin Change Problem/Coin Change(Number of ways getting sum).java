@@ -10,12 +10,11 @@ public class CoinChange {
             for(int j = 0; j <= sum; j++){
                 if(j == 0){
                     dp[i][j] = 1;
-                }
-                else{
+                } else {
                     long excluding = 0;
                     long including = 0;
                     
-                    if(i > 0){     //excluding coins[i]
+                    if(i > 0){     				//excluding coins[i]
                         excluding  = dp[i-1][j];
                     }
                     if(j >= coins[i]){  //including coins[i]
@@ -25,9 +24,9 @@ public class CoinChange {
                     dp[i][j] = excluding + including;
                     
                     // if i started with 1 then
-                    // if(j < a[i]) //excluding a[i]
+                    // if(j < a[i])                            //excluding a[i]
                     //     dp[i][j] = dp[i-1][j];
-                    // else        // excluding  + including
+                    // else                                    // excluding  + including
                     //     dp[i][j] = dp[i-1][j] + dp[i][j-a[i]];
                 }
                 
