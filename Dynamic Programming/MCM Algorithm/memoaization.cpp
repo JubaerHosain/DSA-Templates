@@ -14,8 +14,7 @@ int split[N][N];
 void print_parenthesis(int i, int j) {
     if(i == j) {
         cout << "A" << i;
-    }
-    else {
+    } else {
         cout << "(";
         print_parenthesis(i, split[i][j]);
         cout << "*";
@@ -69,10 +68,10 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif 
+    // #ifndef ONLINE_JUDGE
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    // #endif 
  
     cout << fixed << showpoint;
     cout << setprecision(5);

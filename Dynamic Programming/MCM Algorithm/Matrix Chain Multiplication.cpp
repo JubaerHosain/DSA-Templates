@@ -40,7 +40,7 @@ void solve() {
 
     cout << dp[1][n-1] << endl;
     
-//     print parenthesis using recursion, sumon sir slide!!!
+    // print parenthesis using recursion, sumon sir slide!!!
 }
 
 /*****main function*****/
@@ -58,9 +58,7 @@ int main() {
 
     int test = 1;
     //cin >> test;
-    while(test--) {
-        solve();
-    }
+    while(test--) solve();
 
     return 0;
 } 
