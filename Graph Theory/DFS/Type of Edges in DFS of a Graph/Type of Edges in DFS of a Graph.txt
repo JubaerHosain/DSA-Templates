@@ -1,0 +1,6 @@
+Tree Edge: It is an edge which is present in the tree obtained after applying DFS on the graph. All the Green edges are tree edges. 
+Forward Edge: It is an edge (u, v) such that v is descendant but not part of the DFS tree. Edge from 1 to 8 is a forward edge. 
+Back edge: It is an edge (u, v) such that v is ancestor of node u but not part of DFS tree. Edge from 6 to 2 is a back edge. Presence of back edge indicates a cycle in directed graph. 
+Cross Edge: It is a edge which connects two node such that they do not have any ancestor and a descendant relationship between them. Edge from node 5 to 4 is cross edge.
+
+Edit these definitions.......

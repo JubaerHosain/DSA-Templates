@@ -1,0 +1,9 @@
+In computer science and optimization theory, the max-flow min-cut theorem states that in a flow network, 
+the maximum amount of flow(max-flow) passing from the source to the sink is equal to the total weight of 
+the edges in a minimum cut.
+i.e.minimum cut: the smallest total weight of the edges which if removed would disconnect the source from the sink.
+
+Following are steps to print all edges of the minimum cut.
+1) Run Ford-Fulkerson/Edmond-Karp algorithm and consider the final residual graph.
+2) Find the set of vertices that are reachable from the source in the residual graph.
+3) All edges which are from a reachable vertex to non-reachable vertex are minimum cut edges. Print all such edges.

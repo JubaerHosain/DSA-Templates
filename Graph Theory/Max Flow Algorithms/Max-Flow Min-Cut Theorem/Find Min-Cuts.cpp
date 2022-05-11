@@ -1,9 +1,18 @@
 /*
-    residual capacitty actually the current capacity of an edge.
-    initially same as capacity of edge bcz there is no flow.
+    In computer science and optimization theory, the max-flow min-cut theorem states that in a flow network, 
+    the maximum amount of flow(max-flow) passing from the source to the sink is equal to the total weight of the edges in a minimum cut, 
+    i.e.minimum cut: the smallest total weight of the edges which if removed would disconnect the source from the sink.
+
+    Following are steps to print all edges of the minimum cut.
+    1) Run Ford-Fulkerson/Edmond-Karp algorithm and consider the final residual graph.
+    2) Find the set of vertices that are reachable from the source in the residual graph.
+    3) All edges which are from a reachable vertex to non-reachable vertex are minimum cut edges. Print all such edges.
+
+    HERE I USED DINIC'S ALGO IN UNDIRECTED GRAPH
 */
 
 
+//    CSES Police Chase
 #include<bits/stdc++.h>
 using namespace std;
 #define endl          '\n'//notforinter
@@ -20,8 +29,8 @@ typedef vector<vector<int>> vii;
 ll inf = 1e18+5;
 int mod = 1e9+7;
 const int N = 5e2+5;
-int level[N];
-ll graph[N][N];
+int level[N], used[N];
+ll graph[N][N], orginal[N][N]; //residual and orginal graph
 
 bool bfs(int src, int dest, int n) {
     rep(i, 1, n) level[i] = -1;
@@ -64,30 +73,59 @@ ll send_flow(int u, int dest, int n, ll flow) {
     return 0;
 }
 
+void reachable(int src, int n) {
+    memset(used, 0, sizeof used);
+
+    queue<int> q;
+    q.push(src);
+    used[src] = 1;
+    while(!q.empty()) {
+        int u = q.front();
+        q.pop();
+
+        rep(v, 1, n) {
+            if(!used[v] && graph[u][v] > 0) {
+                q.push(v);
+                used[v] = 1;
+            }
+        }
+    }
+}
+
 void solve() {
     int n, m;
     cin >> n >> m;
 
     rep(i, 1, m) {
-        int u, v, c;
-        cin >> u >> v >> c;
-        graph[u][v] += c;
+        int u, v;
+        cin >> u >> v;
+        graph[u][v]++, graph[v][u]++;
+        orginal[u][v]++, orginal[v][u]++;
     }
 
     int src = 1;
     int dest = n;
     
-    ll max_flow = 0;
     while(bfs(src, dest, n)) {
         while(1) {
             ll curr_flow = send_flow(src, dest, n, inf);
             if(curr_flow <= 0 || curr_flow == inf)
                 break;
-            max_flow += curr_flow;
         }
     }
 
-    print(max_flow);
+    //mark reachable nodes
+    reachable(src, n);
+
+    vector<pii> cuts;
+    rep(u, 1, n) rep(v, 1, n) {
+        if(used[u] && !used[v] && orginal[u][v] > 0) 
+            cuts.push_back({u, v});
+    }
+
+    print(cuts.size());
+    for(pii it: cuts)
+        cout << it.first << " " << it.second << endl;
 }
  
 /*****main function*****/
@@ -111,3 +149,4 @@ int main() {
  
     return 0;
 } 
+

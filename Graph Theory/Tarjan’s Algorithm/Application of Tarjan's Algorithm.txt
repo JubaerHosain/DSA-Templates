@@ -1,0 +1,5 @@
+1) SCC
+2) Articulation Point
+3) Bridges
+4) Biconnected Component
+...........

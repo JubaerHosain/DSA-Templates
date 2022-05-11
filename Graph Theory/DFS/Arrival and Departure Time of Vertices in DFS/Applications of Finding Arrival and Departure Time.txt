@@ -1,0 +1,8 @@
+Applications of finding Arrival and Departure Time:
+
+Topological sorting in a DAG(Directed Acyclic Graph).
+Finding 2/3–(edge or vertex)–connected components.
+Finding bridges in graphs.
+Finding biconnectivity in graphs.
+Detecting cycle in directed graphs.
+Tarjan’s algorithm to find strongly connected components, and many more…
