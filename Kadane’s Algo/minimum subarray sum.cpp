@@ -1,13 +1,1 @@
-vector<int> v;
-
-int kadens_algo(int n) {
-    int mn = v[0];
-    int curr = v[0];
-
-    rep(i, 1, n) {
-        curr = min(v[i], v[i]+curr);
-        mn = min(mn, curr);
-    }
-
-    return mn;
-}
+Multiply all element by -1 and then find maximum subarray sum. Finally multiply answer by -1 again. 
