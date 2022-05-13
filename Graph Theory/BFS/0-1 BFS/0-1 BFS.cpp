@@ -1,4 +1,4 @@
-problem link: https://www.codechef.com/problems/REVERSE
+// problem link: https://www.codechef.com/problems/REVERSE
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -42,10 +42,8 @@ int bfs01(int src, int dest) {
                 level[v] = w + level[u];
                 if(w == 1) {
                     q.push_back(v);
-                }
-                else {
-                    // this v will be process in the same level as u
-                    // bcz pushed in the front
+                } else {
+                    // this v will be process in the same level as u that's why pushed in the front
                     q.push_front(v);
                 }
             }
