@@ -31,9 +31,11 @@ void kmp(string &text, string &pat) {
     int n = text.size();
     int m = pat.size();
 
+    // computing lps
     vector<int> lps(m);
     compute_lps(pat, lps);
 
+    // matching pattern
     int i = 0, j = 0;
     while(i < n) {
         if(text[i] == pat[j]) {
