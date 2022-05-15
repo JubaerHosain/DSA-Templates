@@ -1,0 +1,6 @@
+#: Using Disjoint Set
+if(find(x) == x) cnt++;
+that means x is the root of a component.
+
+#: Using DFS:
+Run a dfs and mark

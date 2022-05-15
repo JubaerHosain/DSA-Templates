@@ -1,0 +1,5 @@
+int mask = 0;
+for(char ch: word) {
+    int bit = ch - 'a';
+    mask = mask | (1<<bit);
+}
