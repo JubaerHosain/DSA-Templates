@@ -1,1 +1,2 @@
 A monotonic stack is a stack whose elements are monotonically increasing or descreasing.
+Typically stores indexes.
