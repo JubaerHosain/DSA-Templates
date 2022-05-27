@@ -1,1 +1,3 @@
-asdfads
+https://cp-algorithms.com/string/string-hashing.html#determine-the-number-of-different-substrings-in-a-string
+
+// Collision Handling, make two hash of a string with two diffrent prime p

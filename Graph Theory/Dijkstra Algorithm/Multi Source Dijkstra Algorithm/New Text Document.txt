@@ -1,0 +1,8 @@
+I want to know that can we apply Dijkstra algorithm for multiple sources?
+If we give all sources to current shortest path to zero and insert all sources 
+to the queue and then regular relaxation.
+Is this above approach work? Can anyone help me out?
+
+:) Yes,
+For simplicity. Create a dummy node ‘x’ and connect ‘x’ to your sources.
+Now, apply dijkstra as x as source.
