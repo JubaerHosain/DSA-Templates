@@ -2,4 +2,9 @@
 2) Articulation Point
 3) Bridges
 4) Biconnected Component
+
 ...........
+What is "in" and "low" value?
+in = discovery vlaue
+low (low link) = “Low” value of a node tells the topmost reachable ancestor (with minimum possible Discovery 
+value) via the subtree of that node.
