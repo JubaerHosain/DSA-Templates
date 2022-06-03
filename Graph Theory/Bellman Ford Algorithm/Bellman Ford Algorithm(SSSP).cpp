@@ -8,6 +8,8 @@
     will either lie in a negative weight cycle, or is reachable from it(but not in the cycle).
 */
 
+// Cycle Finding, CSES
+
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -40,10 +42,12 @@ void solve() {
         edges.push_back({w, {u, v}});
     }
 
-    //disr[src] = 0;
+    //dist[src] = 0;
     //parent[src] = -1;
-    //if sssp then initialize dist with inf
-    //if not then sssp initialize dist with 0
+    //if want to sssp then initialize dist with inf and dist[src] = 0
+
+
+    //for finding cycle initializes dist with 0(with inf gives wrong answer)
     fill(dist, dist+N, 0);
 
     //need n-1 opertion but n th operation detect cycle;
