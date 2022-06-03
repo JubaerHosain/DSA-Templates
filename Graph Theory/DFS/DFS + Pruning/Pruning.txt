@@ -1,0 +1,2 @@
+1) Avoiding unnecessary dfs calls.
+2) Optimizes dfs traversal.

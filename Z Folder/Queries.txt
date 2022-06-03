@@ -1,0 +1,1 @@
+If queries are given then we have to think something like rearrange queries according to some factor.
