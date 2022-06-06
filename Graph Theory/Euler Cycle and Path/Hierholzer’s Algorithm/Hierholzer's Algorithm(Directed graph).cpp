@@ -10,15 +10,14 @@ typedef long double ld;
 typedef pair<int, int> pii;
 typedef vector<vector<int>> vii;
 
-//this code is for Euler cycle but can be modified for Euler path
+//EULERIAN PATH
 
 /*****User defined function*****/
 const int N = 1e5+5;
 bool used[N];
-set<int> g[N];
-int degree[N];
+vector<int> g[N];
+int in[N], out[N];
 vector<int> path;
-
 
 void component(int u) {
     used[u] = 1;
@@ -29,26 +28,30 @@ void component(int u) {
 }
 
 bool has_euler(int n) {
-    rep(i, 1, n) 
-        if(degree[i]&1)
+    //only for eulerian path
+    if(out[1]-in[1] != 1 || in[n]-out[n] != 1)
+        return false;
+
+    //if eulerian cycle then 1 to n
+    rep(i, 2, n-1) 
+        if(in[i] != out[i])
             return false;
 
     memset(used, 0, sizeof used);
     component(1);
 
     rep(i, 1, n) 
-        if(!used[i] && degree[i] != 0)
+        if(!used[i] && (in[i] != 0 || out[i] != 0))
             return false;
 
     return true; 
 }
 
 void make_path(int u) {
-    while(degree[u]) {
-        int v = *g[u].begin();
-        g[u].erase(v);
-        g[v].erase(u);
-        degree[u]--, degree[v]--;
+    while(out[u]) {
+        out[u]--;
+        int v = g[u].back();
+        g[u].pop_back();
         make_path(v);
     }
     path.push_back(u);
@@ -61,9 +64,8 @@ void solve() {
     rep(i, 1, m) {
         int u, v;
         cin >> u >> v;
-        g[u].insert(v);
-        g[v].insert(u);
-        degree[u]++, degree[v]++;
+        g[u].push_back(v);
+        out[u]++, in[v]++;
     }
 
     if(!has_euler(n)) {
