@@ -1,0 +1,1 @@
+Z[i] is the length of longest string that is at the same time, a prefix of s and a prefix of the suffix of s starting at i.
