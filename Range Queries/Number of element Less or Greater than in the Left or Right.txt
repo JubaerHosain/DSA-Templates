@@ -1,0 +1,3 @@
+#Merge Sort Tree
+#Fenwick Tree(BIT)
+#Divde and Conquer
