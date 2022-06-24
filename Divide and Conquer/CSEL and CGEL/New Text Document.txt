@@ -1,0 +1,2 @@
+CSEL = Count Smaller Element on the Left
+CGEL = Count Greater Element on the Left

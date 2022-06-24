@@ -5,6 +5,8 @@ private:
     void merge(vector<int> &nums, vector<int> &inx, int left, int mid, int right) {
         vector<int> tmp_inx(right-left+1);
         int i = left, j = mid+1, k = 0;
+
+        // sort in non-increasing order
         while(i <= mid && j <= right) {
             if(nums[inx[i]] <= nums[inx[j]]) {
                 tmp_inx[k++] = inx[j++];
