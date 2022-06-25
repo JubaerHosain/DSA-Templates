@@ -1,13 +1,13 @@
 /*
-    1. For index i, i is responsible for 2^LSB number below it including this.
-    thats why while counting prefix sum i = i - LSB(i). LSB(i) returns the value of
-    2^LSB;
+    1. BIT[i] stores the sum of values between (j+1 to i) inclusive where j = i - LSB(i). 
+    LSB(i) returns the value of 2^LSB;
     2. For index i its upper index is i = i + LSB(i). so for updating index i, we should
     update all of its uppder index's.
     3. BIT stores the values in prefix sum manner
     4. Fenwick tree is 1 indexing
-
+    
     Here, LSB(i) = i & -i;
+    j = i - LSB(i) means the number after removing last set bit from i
 */
 
 #include<bits/stdc++.h>
