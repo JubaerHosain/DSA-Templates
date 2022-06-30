@@ -1,10 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define endl    '\n'
+#define all(v)   v.begin(), v.end()
 typedef long long ll;
 typedef long double ld;
 typedef pair<int, int> pii;
 typedef vector<vector<int>> vii;
+
  
 /*****User defined function*****/
 
