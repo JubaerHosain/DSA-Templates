@@ -35,7 +35,7 @@ void binary_lifting(int u, int p) {
 
 // binary lifting iterative apporach
 // first find  2^1, then 2^2, then 2^3...for all u
-// rep(i, 1, 30) {   this loop shoul be first
+// rep(i, 1, 30) {   this loop should be first
 //     rep(u, 1, n) {  all parent of u is processed or not don't know. thats why this loop is second
 //         up[u][i] = up[up[u][i-1]][i-1];
 //     }
