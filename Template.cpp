@@ -2,6 +2,8 @@
 using namespace std;
 #define endl    '\n'
 #define all(v)   v.begin(), v.end()
+#define rep(i, s, n)  for(int i = s; i <= n; i++)
+#define rrep(i, n, s) for(int i = n; i >= s; i--)
 typedef long long ll;
 typedef long double ld;
 typedef pair<int, int> pii;
