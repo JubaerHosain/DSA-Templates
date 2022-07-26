@@ -28,7 +28,7 @@ void build_table(vector<int> a, int n) {
     }
 }
 
-int get_min(int l, int r, vector<int> a) {
+int get_min(int l, int r, vector<int> &a) {
     int j = log2(r-l+1);
     if(a[table[l][j]] < a[table[r-(1<<j)+1][j]]) 
         return table[l][j];
