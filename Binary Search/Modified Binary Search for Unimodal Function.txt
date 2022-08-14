@@ -1,0 +1,3 @@
+Is ternary search useful?
+Ternary search is extremely useful in the case when the function can’t be differentiated easily. 
+We can use it to find the extremum(minimum and maximum) of a function. 
