@@ -1,1 +1,3 @@
 1) https://www.codechef.com/COOK138B/problems/PERMEX
+2) Please tell me the efficient algorithm of Range Mex Query.
+

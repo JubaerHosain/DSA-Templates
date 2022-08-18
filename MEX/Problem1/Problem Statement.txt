@@ -1,0 +1,8 @@
+// Multiset
+1. Add x to the set
+2. Delete y from the set
+3. Find the MEX of the set
+
+
+hint: create a complement set
+youtube link: https://www.youtube.com/watch?v=JDuVLyKn7Yw
