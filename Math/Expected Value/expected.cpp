@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define endl          '\n'
+#define all(v)        v.begin(), v.end()
+#define rep(i, s, n)  for(int i = s; i <= n; i++)
+#define rev(i, n, s)  for(int i = n; i >= s; i--)
+typedef long long ll;
+typedef long double ld;
+typedef pair<int, int> pii;
+typedef vector<int> vi;
+typedef vector<vector<int>> vii;
+ 
+/*****User defined function*****/
+
+int rollDice() {
+    return rand()%6 + 1;
+}
+
+void solve_problem() {
+    double total = 0;
+    
+    // if n is increases then output comes closer
+    // expected value of dice rolling 
+
+    int n = 1000000;
+    rep(i, 1, n) 
+        total += rollDice();
+
+    cout << "Expected value: " << total / n << endl; 
+}
+ 
+/*****main function*****/
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    #endif 
+ 
+    cout << fixed << showpoint;
+    cout << setprecision(15);
+ 
+    int test = 1;
+    // cin >> test;
+    while(test--) solve_problem();
+
+    return 0;
+} 
+

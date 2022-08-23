@@ -1,0 +1,6 @@
+Expectation or expected value of any group of numbers in probability is the long-run average 
+value of repetitions of the experiment it represents. For example, the expected value in rolling 
+a six-sided die is 3.5, because the average of all the numbers that come up in an extremely large 
+number of rolls is close to 3.5. Less roughly, the law of large numbers states that the arithmetic 
+mean of the values almost surely converges to the expected value as the number of repetitions 
+approaches infinity. The expected value is also known as the expectation, mathematical expectation, EV, or first moment.
