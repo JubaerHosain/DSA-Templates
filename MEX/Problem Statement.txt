@@ -5,4 +5,5 @@
 
 
 hint: create a complement set
+add all values 0-max in a set. 
 youtube link: https://www.youtube.com/watch?v=JDuVLyKn7Yw
