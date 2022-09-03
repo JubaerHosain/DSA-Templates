@@ -11,6 +11,13 @@ struct suffix {
     int rank[2];
 };
 
+bool cmp(suffix a, suffix b) {
+    if(a.rank[0] == b.rank[0]) 
+        return a.rank[1] < b.rank[1];
+    else
+        return a.rank[0] < b.rank[0]; 
+}
+
 void radix_sort(vector<suffix> &suffixes, int inx) {
     if(inx < 0) 
         return;
@@ -55,6 +62,7 @@ void solve_problem() {
     }
 
     radix_sort(suffixes, 1);
+    //sort(suffixes.begin(), suffixes.end(), cmp);
 
     vector<int> index_of(n);
     for(int k = 4; k < 2*n; k <<= 1) {
@@ -83,6 +91,7 @@ void solve_problem() {
         }
 
         radix_sort(suffixes, 1);
+        //sort(suffixes.begin(), suffixes.end(), cmp);
     }
 
     for(int i = 0; i < n; i++) {
