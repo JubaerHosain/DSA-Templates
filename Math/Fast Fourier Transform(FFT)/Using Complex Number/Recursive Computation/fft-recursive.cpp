@@ -105,7 +105,7 @@ int main() {
 
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
-    #endif 
+    #endif
  
     cout << fixed << showpoint;
     cout << setprecision(6);

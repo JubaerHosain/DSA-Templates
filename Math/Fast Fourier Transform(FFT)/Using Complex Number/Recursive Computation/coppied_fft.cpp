@@ -71,6 +71,7 @@ vector<int> multiply(vector<int> a, vector<int> b) {
   vector<int> res(sz);
   // Precision problem may occur, round to nearest integer
   for(int i = 0; i < sz; i++) res[i] = z[i].real() + 0.5;
+
   // remove trailing 0's
   while(res.size() > 1 && res.back() == 0) res.pop_back();
   return res;
