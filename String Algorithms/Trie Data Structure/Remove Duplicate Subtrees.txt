@@ -1,3 +1,3 @@
 Tree/
-Tree/Binary Tree
+Tree/ Binary Tree
 Trie/ 1948. Delete Duplicate Folders in System.cpp

@@ -1,7 +1,7 @@
 import java.util.Map;
 import java.util.HashMap;
 
-public class Main {
+public class Trie {
     static class TrieNode {
 	boolean endOfWord;
         Map<Character, TrieNode> children;
