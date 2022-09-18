@@ -83,7 +83,6 @@ string poly_to_num(vector<int> &a) {
     // check if carry > 0 or not if degr = a.size() + b.size() - 1
     // think about input like 9 * 9, res size should 2, but degr becomes 1
     // it may happen when degr = a.size() + b.size() - 1 at multiply function
-    // whitout using -1 in the above fact will not happen
  
     while(a.size() > 1 && a.back() == 0)
         a.pop_back();
