@@ -1,4 +1,4 @@
-store values in descending order on the stack
+// store values in descending order on the stack
 
 class Solution {
 public:

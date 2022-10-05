@@ -1,0 +1,2 @@
+The sum of the number of set bits in (num1 OR num2) and (num1 AND num2) 
+is equal to the sum of the number of set bits in num1 and num2.
