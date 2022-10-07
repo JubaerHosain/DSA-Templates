@@ -1,3 +1,7 @@
+// You are given a tree consisting of n nodes.
+// Your task is to determine for each node the maximum distance to another node.
+
+
 #include<bits/stdc++.h>
 using namespace std;
 #define endl          '\n'

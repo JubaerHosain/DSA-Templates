@@ -1,9 +1,10 @@
 // NSEL = Next Smaller Element in the Left
 // NSER = Next Smaller Element in the Right
 // implemented using monotonic stack
-// stores values in increasing order on the stack
+// stores indices in increasing order of value on the stack
 
-// in case of Next Greater Element: Stores values in descending order
+
+// in case of Next Greater Element: Stores indices in descending order of value
 
 
 // Next smaller element in the left

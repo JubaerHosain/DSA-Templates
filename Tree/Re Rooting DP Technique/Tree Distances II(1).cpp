@@ -1,3 +1,7 @@
+// You are given a tree consisting of n nodes.
+// Your task is to determine for each node the sum of the distances from the node to all other nodes.
+
+
 #include<bits/stdc++.h>
 using namespace std;
 #define endl          '\n'//notforintera
@@ -14,7 +18,7 @@ typedef pair<int, int> pii;
 const int N = 2e5+5;
 int a[N];
 vector<int> g[N];
-//sum = subtree size(number of node in this subtree)
+//sum = subtree size(number of node in this subtree)    
 ll sum[N], ans[N], res;
 
 void dfs(int u, int p, int d) {
@@ -41,6 +45,7 @@ void dfs1(int u, int p) {
         sum[u] -= sum[v]; 
         res += sum[u];
         sum[v] += sum[u];
+        
         dfs1(v, u);
 
         //restore root to u
