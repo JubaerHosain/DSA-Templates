@@ -1,0 +1,1 @@
+contribution of (a, y) = (total/(y+1)) * y;
