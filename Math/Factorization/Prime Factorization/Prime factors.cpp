@@ -3,7 +3,7 @@ void solve() {
     int n;
     cin >> n;
     
-    //sqrt(N) time complexity
+    // sqrt(N) time complexity
     for(int i = 2; i*i <= n; i++) {
         if(n%i == 0) {
             int cnt = 0;

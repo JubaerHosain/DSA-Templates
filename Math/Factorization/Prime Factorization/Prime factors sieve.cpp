@@ -1,4 +1,5 @@
 /*************Sieve of prime factorization*************/
+const int N = 1e7+5;
 vector<int> factor(N, -1);
 
 void factor_sieve() {
@@ -25,5 +26,20 @@ void solve() {
     }
     print(i);
 
-    println;
+
+    // find (prime factor, count) pair
+    // count for each prime factor
+    map<int, ll> mp; 
+    int k = n;
+    while(factor[k] != -1) {
+        int num = factor[k];
+        int cnt = 0;
+        while(k%num == 0) {
+            k /= num;
+            cnt += 1;
+        }
+        mp[num] = cnt;
+    }
+    if(k > 1) mp[k] = 1;
+    
 }
