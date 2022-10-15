@@ -29,9 +29,9 @@ int dfs(int u, int p) {
         }
     }
 
-    diam = max(diam, mx1+mx2);
+    diam = max(diam, 1 + mx1+mx2);
 
-    return 1 + max(mx1, mx2);
+    return 1 + mx1;
 }
 
 void solve() {
