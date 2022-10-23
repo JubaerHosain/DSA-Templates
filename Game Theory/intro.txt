@@ -1,0 +1,4 @@
+1. Nim Game
+2. MiniMax
+3. Composit Games - Grundy Numbers(Nimbers)
+4. Sprague Grundy Theorem

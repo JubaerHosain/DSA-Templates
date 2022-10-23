@@ -1,0 +1,2 @@
+1. Any number that is power of two it has not odd factor.
+3. odd_factor * (multiple of 4) => largest_odd_factor * (power of 2)
