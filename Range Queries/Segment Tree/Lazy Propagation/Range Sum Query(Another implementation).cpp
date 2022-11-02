@@ -12,7 +12,7 @@ typedef vector<vector<int>> vii;
  
 /*****User defined function*****/
 struct Node {
-    long sum;
+    long long sum;
     long long increment;  
 };
 

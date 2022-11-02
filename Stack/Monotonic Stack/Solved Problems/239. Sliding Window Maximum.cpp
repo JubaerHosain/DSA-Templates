@@ -21,3 +21,4 @@ public:
 };
 
 // Can you find sliding window minimum?
+// স্লাইডিং রেঞ্জ মিনিমাম কুয়েরি, শাফায়েতের ব্লগ

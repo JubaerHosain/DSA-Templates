@@ -3,7 +3,7 @@ By using this algorithm the expected time complexity would not be O(V+E) as we h
 queue.add(s)
 while(the queue is not empty)
  for every adjacent vertex v of u
-   if( dist[v] > dist[u] + weight(u,v) )
+   if( dist[v] > dist[u] + weight(u,v))
        dist[v] = dist[u] + weight(u,v)
        add v to the queue
 
