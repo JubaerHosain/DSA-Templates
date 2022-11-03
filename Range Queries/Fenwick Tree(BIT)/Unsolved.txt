@@ -1,0 +1,4 @@
+NICEDAY - The day of the competitors(SPOJ)
+
+BIT(efficient 1)
+Segment Tree(efficient 2)

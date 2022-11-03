@@ -1,4 +1,4 @@
 Number of element less than a[i] in the left/right
-Number of element greater than a[i] in the left right
+Number of element greater than a[i] in the left/right
 
 Inversion Count uses these properties
