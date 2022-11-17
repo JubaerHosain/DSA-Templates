@@ -1,0 +1,1 @@
+Another way: split node into two part and add node capacity as edge between these two node.

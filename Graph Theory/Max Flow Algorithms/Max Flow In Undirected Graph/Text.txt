@@ -1,0 +1,7 @@
+Question: How can I find maximum flow in this undirected graph? Can anyone show the step?
+
+Ans: There is algorithm called Ford-Fulkerson algorithm which gives the maximum flow of a flow network in polynomial time, you can look it up in the book Algorithm Design by Kleinberg and Tardos, or even in CLRS.
+
+The only thing you need to do to solve your problem is that you should replace every edge in your undirected grah by two edges backwards and forwards with the same capacity and then solve your problem using the Ford-Fulkerson algorithm. 
+
+It can be easily proven that in such conversion, flow only propagates through one of the two edges and always one of them is not used.
