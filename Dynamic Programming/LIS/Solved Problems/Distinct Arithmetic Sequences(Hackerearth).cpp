@@ -53,14 +53,15 @@ void solve_problem() {
 
        
     /*
-        why D = 2*m/(m-1)
-        -m <= a[i] <= m
-        a, a+d, a+2d....a+(m-1)d
+        why D = 2*m/(m-1)?
+        given that, -m <= a[i] <= m
+        series: a, a+d, a+2d....a+(m-1)d
         
         so, a+(m-1)d = m       // as max can be m, a can be -m
         or, (m-1)d = m-a = m+m
         so, d = 2*m/(m-1)
     */
+    
     
     ll ans = 0;
     int D = 2*m/(m-1);   

@@ -21,6 +21,8 @@ void factor_sieve() {
     }
 
     for(int i = 3; i*i <= N; i += 2) {
+        if(factor[i] != -1)
+                continue;
         for(int j = 2*i; j <= N; j += i) {
             if(factor[j] == -1) factor[j] = i;
         }

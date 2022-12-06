@@ -1,0 +1,2 @@
+count the numbers divisible by both x and y.
+find the count divisible by lcm(x, y).

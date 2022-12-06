@@ -12,6 +12,7 @@ typedef pair<ll, ll> pii;
 
 
 // All pair shortest path for(1 <= m <= n).
+// for small n and m where it would be better than floyd-warshall
 
 /*************User defined function*************/
 const ll inf = 1e18;
