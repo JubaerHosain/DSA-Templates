@@ -3,6 +3,17 @@ using namespace std;
 #define endl          '\n'
 #define all(v)        v.begin(), v.end()
 
+
+using namespace chrono;
+auto t1 = high_resolution_clock::now();
+fib = fibonacci(n);
+auto t2 = high_resolution_clock::now();
+duration<double, milli> diff = t2 - t1;
+        
+// beautify      
+cout << setw(5) << n << "\t\t" << setw(9) << fib << "\t" << setw(7) << diff.count() << endl;
+
+
 /*****User defined function*****/
 const int N = 1e8;
 

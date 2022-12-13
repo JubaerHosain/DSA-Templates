@@ -1,3 +1,6 @@
+// this is giving tle on second greater part
+
+
 class Solution {
 public:
     vector<int> secondGreaterElement(vector<int>& nums) {
