@@ -1,0 +1,1 @@
+Prove that n distinct point-value pairs are necessary to uniquely specify a polynomial of degree-n bound, that is, if fewer than  distinct point-value pairs are given, they fail to specify a unique polynomial of degree-bound n.
