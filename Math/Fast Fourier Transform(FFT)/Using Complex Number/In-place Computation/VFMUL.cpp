@@ -19,8 +19,8 @@ typedef complex<ld> Complex;
 void fft(vector<Complex> &p, bool invert) {
     int n = p.size();
  
-    // re arrange leaf nodes
-    // it is called the bit-reversal permutation
+    // re arrange leaf nodes, it is called the bit-reversal permutation
+    // j = reverse bit representation of i with log2(n) number of bit
     for(int i = 1, j = 0; i < n; i++) {
         int bit = n >> 1;
         for(; (j&bit); bit >>= 1)
@@ -82,7 +82,7 @@ string poly_to_num(vector<int> &a) {
     
     // check if carry > 0 or not if degr = a.size() + b.size() - 1
     // think about input like 9 * 9, res size should 2, but degr becomes 1
-    // it may happen when degr = a.size() + b.size() - 1 at multiply function
+    // it may happen if use [degr = a.size() + b.size() - 1] at multiply function
  
     while(a.size() > 1 && a.back() == 0)
         a.pop_back();

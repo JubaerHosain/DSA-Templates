@@ -1,4 +1,4 @@
-// SPOJ Problem
+// SPOJ Problem (TLE in recursive approach)
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -16,47 +16,62 @@ typedef vector<vector<int>> vii;
 const ld PI = 2 * acos(0.0);
 typedef complex<ld> Complex;
  
-void fft(vector<Complex> &p, bool inverse = false) {
+void fft(valarray<Complex> &p, bool inverse = false) {
+    if(p.size() <= 1) return;
+
     int n = p.size();
- 
-    // re arrange leaf nodes, it is called the bit-reversal permutation
-    // j = reverse bit representation of i with log2(n) number of bit
-    for(int i = 1, j = 0; i < n; i++) {
-        int bit = n >> 1;
-        for(; (j&bit); bit >>= 1)
-            j ^= bit;
-        j ^= bit;
-        if (i < j) swap(p[i], p[j]);
+    valarray<Complex> f = p[slice(0, n/2, 2)];  // all even position
+    valarray<Complex> g = p[slice(1, n/2, 2)];  // all odd position
+
+    // do fft on both f and g
+    fft(f, inverse); 
+    fft(g, inverse);
+
+    Complex w = Complex(1, 0);
+    //a primitive root of x^n = 1 is e^(2pi/n)
+    Complex omega_n = exp(Complex(0, 2*PI/n));
+
+    // this condition for inverse fft
+    if(inverse) omega_n = Complex(1, 0) / omega_n;
+
+    for(int k = 0; k < n/2; k++) {
+        Complex add = w * g[k];      
+        // this is p(x)
+        p[k] = f[k] + add;
+        // note that p(-x) should be in (x+n/2)th position
+        p[k+n/2] = f[k] - add;
+        w *= omega_n;
     }
- 
-    // arg = 2pi/len
-    // e^(2pi/len) = cos(ang) + i*sin(arg) [- for inverse]
-    for(int len = 2; len <= n; len <<= 1) {
-        double ang = 2 * PI / len * (inverse ? -1 : 1);
-        Complex omega_len(cos(ang), sin(ang));
-        for(int i = 0; i < n; i += len) {
-            Complex w = Complex(1, 0);
-            for(int j = 0; j < len / 2; j++) {
-                Complex u = p[i+j], v = p[i+j+len/2] * w;
-                p[i+j] = u + v, p[i+j+len/2] = u - v;
-                w *= omega_len;
-            }
-        }
-    }
- 
-    if (inverse) 
-        for (Complex &x : p) x /= n;
 }
+
+void inverse_fft(valarray<Complex> &p) {
+    fft(p, true);
+    // divide each element by p.size()
+    p /= p.size();
+}
+
  
 vector<ll> multiply(vector<int> &a, vector<int> &b) {
-    vector<Complex> fa(all(a)), fb(all(b));
     
     int n = 1;
     int degr = a.size() + b.size();
     while (n < degr) 
         n <<= 1;
-    fa.resize(n);
-    fb.resize(n);
+
+    valarray<Complex> fa(n), fb(n);
+    for(int i = 0; i < n; i++) {
+        if(i < a.size())
+            fa[i] = Complex(a[i], 0);
+        else
+            fa[i] = Complex(0, 0);
+    }
+
+    for(int i = 0; i < n; i++) {
+        if(i < a.size())
+            fb[i] = Complex(b[i], 0);
+        else
+            fb[i] = Complex(0, 0);
+    }
  
     fft(fa);
     fft(fb);
@@ -64,7 +79,7 @@ vector<ll> multiply(vector<int> &a, vector<int> &b) {
     for(int i = 0; i < n; i++)
         fa[i] *= fb[i];
  
-    fft(fa, true);
+    inverse_fft(fa);
  
     vector<ll> result(n);
     for(int i = 0; i < n; i++)
@@ -96,10 +111,6 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
- 
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    #endif 
  
     cout << fixed << showpoint;
     cout << setprecision(15);

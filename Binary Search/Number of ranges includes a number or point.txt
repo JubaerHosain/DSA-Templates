@@ -1,0 +1,12 @@
+
+Approach 1:
+Use difference array technique. for range (l, r), dp[l] += 1 and dp[r+1] -= 1 and then calculate prefix sum
+dp[number] is the answer.
+
+
+Approach 2:
+see: Points in Segments (II) [LightOJ]
+
+
+
+

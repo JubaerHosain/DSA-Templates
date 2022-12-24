@@ -21,9 +21,11 @@ void fft(valarray<Complex> &p, bool inverse = 0) {
     valarray<Complex> g = p[slice(1, n/2, 2)];  // all odd position
 
     // do fft on both f and g
-    fft(f, inverse); fft(g, inverse);
+    fft(f, inverse); 
+    fft(g, inverse);
 
     Complex w = Complex(1, 0);
+    //a primitive root of x^n = 1 is e^(2pi/n)
     Complex omega_n = exp(Complex(0, 2*PI/n));
 
     // this condition for inverse fft

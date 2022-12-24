@@ -1,6 +1,5 @@
-2. Miller-Rabin Algorithm.
 8. DP on Bitmasking.
-9. Fast Fouriar Transform.
+10. Dynamic Graph Connectivity Problem
 
 https://codeforces.com/blog/-Morass-
 
