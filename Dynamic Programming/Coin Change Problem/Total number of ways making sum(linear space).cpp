@@ -16,11 +16,15 @@ public:
         if(sum < 2*k) 
             return 0;
 
-        // using each element only one time.
-        vector<ll> dp(k, 0); // number of ways sum less than k
+        // using each element at most one time.
+        
+         // number of ways sum less than 
+         // dp[i] = total number of ways to make sum i
+        vector<ll> dp(k, 0);   
         int n = nums.size();
         dp[0] = 1;
         for(int i = 0; i < n; i++) {
+        // reverse loop for picking at most one time
             for(int j = k-1; j >= nums[i]; j--)
                 dp[j] = (dp[j] + dp[j-nums[i]])%mod;
         }

@@ -22,10 +22,11 @@ void solve() {
     vector<int> a(n);
     rep(i, 0, n) cin >> a[i];
 
-    //every element can use only one time
+    //every element can use at most one time
     vector<bool> dp(k+1, false);
     dp[0] = true;
     rep(i, 0, n) {
+        // reverse loop for picking at most one time
         rrep(j, k, a[i]) {
             dp[j] = dp[j] || dp[j-a[i]];
         }
