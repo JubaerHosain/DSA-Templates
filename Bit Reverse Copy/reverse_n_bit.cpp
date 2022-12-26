@@ -1,8 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// reversed only actual binary representation
-// not leading zero's
+// reversed only actual binary representation, not leading zero's
 unsigned int reverse_bits(unsigned int n) {
     unsigned int rev = 0;
     while (n > 0) {

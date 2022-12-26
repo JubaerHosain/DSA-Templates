@@ -6,8 +6,8 @@
 
 ll mod_mul(ll a, ll b, ll p) {
     ll res = 0;
-    while(b) {
-        if(b&1)
+    while(b > 0) {
+        if(b&(1LL))
             res = (res + a) % p;
         b >>= 1;
         a = (a + a) % p;
@@ -19,8 +19,8 @@ ll mod_mul(ll a, ll b, ll p) {
 ll mod_pow(ll a, ll n, ll p) {
     ll res = 1;
 
-    while(n) {
-        if(n&1) 
+    while(n > 0) {
+        if(n&(1LL)) 
             res = mod_mul(res, a, p);
         n >>= 1;
         a = mod_mul(a, a, p);

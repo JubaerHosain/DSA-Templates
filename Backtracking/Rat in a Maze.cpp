@@ -46,7 +46,7 @@ void solve_problem() {
     // grid[i][j] == 0, obstracle
     // otherwise can move 
     // this problem only moves right and down..
-    // find solutin which will moves 4 direction
+    // find solution which will moves 4 direction
 
     int** grid = new int*[n];
     int** res = new int*[n];

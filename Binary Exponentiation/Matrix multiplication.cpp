@@ -50,7 +50,7 @@ vii mul(vii v, int m, int n) {
         }
     }
 
-    while(n) {
+    while(n > 0) {
         if(n%2) {
             res = mul(res, v, m);
             n--;

@@ -1,4 +1,4 @@
-// O(m^n) 
+// Time complexity: O(m^n) 
 
 #include<bits/stdc++.h>
 using namespace std;

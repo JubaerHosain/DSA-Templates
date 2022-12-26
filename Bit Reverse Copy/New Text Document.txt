@@ -1,1 +1,2 @@
 Special Algorithm (Bit Reverse Copy বলা হয়) দিয়ে Leaf Node এ কি কি থাকার কথা সেইগুলা বের করে নেই।
+In case of merge sort like divide and conquer (n must be power of 2)
