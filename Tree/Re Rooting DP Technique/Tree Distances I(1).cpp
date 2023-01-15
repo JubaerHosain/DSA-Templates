@@ -40,7 +40,7 @@ void dfs2(int u, int p = -1) {
 			}
 		}
 		else {
-			mx2[v] = mx1[u];
+			mx2[v] = mx1[v];
 			mx1[v] = 1 + mx1[u];
 			child[v] = u;
 		}
