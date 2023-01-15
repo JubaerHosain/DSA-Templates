@@ -16,7 +16,8 @@ typedef vector<vector<int>> vii;
 // count subarrays with xor k
 ll count_subarray(vector<int> &pxor, int n, int k) {
     // a[i] <= n so max xor can be at max 2*n
-    int N = 2*n + 1;
+    // k <= 2*n, so N should 4*n
+    int N = 4*n + 1;
     vector<int> mp(N, 0);
     ll ans = 0;
 
@@ -49,7 +50,9 @@ void solve_problem() {
     ll ans = n * (n+1) / 2;
     ll cnt = 0;
     // only perfect squares have odd number of divisor
-    for(int i = 0; i*i <= n; i++) {
+    // xor can have at max 2n
+    int N = 2*n;
+    for(int i = 0; i*i <= N; i++) {
         cnt += count_subarray(pxor, n, i*i);
     }
 
@@ -71,3 +74,5 @@ int main() {
 
     return 0;
 } 
+
+

@@ -18,6 +18,8 @@ typedef vector<vector<int>> vii;
 const int N = 2e5+5;
 int table[N][30];
 
+// table[i][j] contains f(a[i] to a[i+(2^j)-1])
+
 void build_table(vector<int> &a, int n) {
     rep(i, 0, n-1) table[i][0] = a[i];
 
