@@ -6,6 +6,8 @@
 
 // in case of Next Greater Element: Stores indices in descending order of value
 
+//  for nexg greater use " <= "
+// equal sign means strictly greater or smaller
 
 // Next smaller element in the left
 vector<int> NSEL(vector<int> &nums) {
