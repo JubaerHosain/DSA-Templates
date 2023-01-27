@@ -44,6 +44,33 @@ void solve() {
 }
 
 
+// returns indices
+set<int> sub_set(vector<int> &a, int sum) {
+    vector<int> dp(sum+1, -1);
+    int n = a.size();
+    dp[0] = 1;
+    for(int i = 0; i < n; i++) {
+        for(int j = sum; j >= a[i]; j--) {
+            // storing indices
+            if(dp[j] == -1 and dp[j-a[i]] > -1)
+                dp[j] = i;
+        }
+    }
+
+    if(dp[sum] == -1)
+        return {};
+
+    int i = sum;
+    set<int> indices;
+    while(i != 0) {
+        indices.insert(dp[i]);
+        i -= a[dp[i]];
+    }
+
+    return indices;
+}
+
+
 /*****main function*****/
 int main() {
     ios_base::sync_with_stdio(false);
