@@ -11,7 +11,7 @@ typedef vector<vector<int>> vii;
  
 /*****User defined function*****/
 
-void solve_problem() {
+void solve_problem(int t) {
     
 }
  
@@ -30,7 +30,8 @@ int main() {
  
     int test = 1;
     // cin >> test;
-    while(test--) solve_problem();
+    for(int t = 1; t <= test; t++)
+        solve_problem(t);
 
     return 0;
 } 
