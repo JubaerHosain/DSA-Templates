@@ -7,9 +7,9 @@ void primeFactors(int n) {
             cnt++;
             n /= i;
         }
-        if(cnt > 0) fts.add(i);
+        if(cnt > 0) fts.push_back(i);
     }
     
     if(n > 1)
-        fts.add(n);
+        fts.push_back(n);
 }
